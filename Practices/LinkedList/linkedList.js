@@ -8,9 +8,9 @@ import { Node } from "./node.js";
 // insert | insertAtPos
 
 // clearList
-deleteHead
-deleteTail
-deleteAtPos
+// deleteHead
+// deleteTail
+// deleteAtPos
 
 search
 // printList
@@ -68,8 +68,6 @@ export class LinkedList
 
     for (let i = 1; i <= pos - 1; i++)
     {
-      console.log("!!!!!!!!!!!!!! current : ", current);
-      console.log("!!!!!!!!!!!!!! newNode : ", newNode);
       if (i == pos - 1)
       {
         newNode.next = current.next;
@@ -77,6 +75,51 @@ export class LinkedList
       }
 
       current = current.next;
+    }
+  }
+
+  deleteHead () 
+  {
+    this.size--;
+
+    let current = this.head;
+    this.head = current.next;
+  }
+
+  deleteTail ()
+  {
+    this.size--;
+
+    let current = this.head;
+    let last = null;
+
+    while (current.next)
+    {
+      last = current;
+      current = current.next;
+    }
+    last.next = null;
+  }
+
+  deleteAtPos (pos)
+  {
+    this.size--;
+
+    if (pos == 0)
+      this.deleteHead()
+
+    let last = null;
+    let current = this.head;
+
+    for (let i = 1; i < pos; i++)
+    {
+      last = current;
+      current = current.next;
+
+      if (i = pos - 1)
+      {
+        last.next = current.next;
+      }
     }
   }
 
