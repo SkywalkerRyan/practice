@@ -19,8 +19,20 @@ var makeGood = function (s)
 	return sn.join('')
 }
 
+// const testVal = "mC"
+// const testVal = "Pp"
+// const testVal = "leEeetcode"
+// const testVal = "abBAcC"
+// const testVal = "s"
+const testVal = "Hvh"
+// const testVal = "RLlr"
+
+console.log(makeGood(testVal))
 
 
+
+// var makeGood = function (s)
+// {
 // let sn = [];
 
 // for (let i = 0; i < s.length; i++)
@@ -64,16 +76,6 @@ var makeGood = function (s)
 
 // return sn.join('')
 // };
-
-// const testVal = "mC"
-// const testVal = "Pp"
-// const testVal = "leEeetcode"
-// const testVal = "abBAcC"
-// const testVal = "s"
-const testVal = "Hvh"
-// const testVal = "RLlr"
-
-console.log(makeGood(testVal))
 
 
 /*
