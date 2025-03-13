@@ -105,6 +105,16 @@ export class LinkedListDouble
 		this.size--;
 	}
 
+	peekHead ()
+	{
+		return this.head.val;
+	}
+
+	peekTail ()
+	{
+		return this.tail.val;
+	}
+
 	printList ()
 	{
 		let result = "";
