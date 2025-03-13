@@ -64,6 +64,47 @@ export class LinkedListDouble
 		return;
 	}
 
+	insertAtPos (pos, val)
+	{
+		if (pos === 0) return this.insertAtHead(val)
+
+		if (pos === this.size) return this.insertAtTail(val);
+
+		const newNode = new Node(val);
+		let current = this.head;
+		for (let i = 1; i < pos + 1; i++)
+		{
+			if (i === pos - 1)
+			{
+				newNode.next = current.next;
+				newNode.prev = current;
+				current.next = newNode;
+			}
+			if (i === pos + 1)
+				current.prev = newNode;
+
+			current = current.next;
+		}
+	}
+
+	deleteHead ()
+	{
+		let newHead = this.head.next;
+		newHead.prev = null;
+
+		this.head = newHead;
+		this.size--;
+	}
+
+	deleteTail ()
+	{
+		let newTail = this.tail.prev;
+		newTail.next = null;
+
+		this.tail = newTail;
+		this.size--;
+	}
+
 	printList ()
 	{
 		let result = "";
