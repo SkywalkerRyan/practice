@@ -1,18 +1,21 @@
 // function countDigits(n)
 // {
-//     // let count = 0;
-//     // let num = n;
+//     let count = 0;
+//     let num = n;
 
-//     // while(num > 0)
-//     // {
-//     //     num = Math.floor(num / 10);
-//     //     count++;
-//     // }
+//     while(num > 0)
+//     {
+//         num = Math.floor(num / 10);
+//         count++;
+//     }
 
-//     // return count;
-
-//     return Math.floor( Math.log10(7723985723089) + 1);
+//     return count;
 // }
+
+function countDigits(n)
+{
+    return Math.floor( Math.log10(n) + 1);
+}
 
 // console.log(countDigits(7723985723089))
 
@@ -80,4 +83,59 @@ function GCD(n1, n2)
 }
 
 // console.log( GCD(10, 15) )
-console.log( GCD(9, 12) )
+// console.log( GCD(9, 12) )
+
+function armstrongNumber(n)
+{
+    let num = n;
+    let sum = 0;
+    let length = countDigits(n);
+
+    while(num > 0)
+    {
+        let last = Math.floor(num % 10);
+        sum += last ** length;
+
+        num = Math.floor(num / 10);
+    }
+
+    if(n === sum) return true;
+
+    return false;
+}
+
+// console.log(armstrongNumber(153))
+
+function divisors(n)
+{
+    let num = n;
+    let root = Math.sqrt(num);
+    let divs = [];
+
+    for(let i = 1; i <= root; i++)
+    {   
+        if(num % i === 0)
+        {
+            divs.push(i)
+            if( num / i !== i )
+                divs.push(num / i)
+        }
+    }
+
+    return divs;
+}
+
+// console.log(divisors(36))
+
+function checkPrime(n)
+{
+    if ( n === 1) return true;
+
+    let divs = divisors(n)
+
+    if(divs.length === 2) return true;
+
+    return false;
+}
+
+// console.log(checkPrime(1))
