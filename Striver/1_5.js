@@ -24,8 +24,43 @@ function factorial(n)
 }
 // console.log(factorial(3))
 
-function revArray( arr )
+// function revArray( arr )
+// {
+//     let newArr = [];
+
+//     for(let i = arr.length; i > 0; i--)
+//         newArr.push(arr[i - 1]);
+
+//     return newArr;
+// }
+
+// function revArray( arr )
+// {
+//     let item1 = 0;
+//     let item2 = arr.length - 1;
+
+//     while(item1 < item2)
+//     {
+//         let temp = arr[item1];
+
+//         arr[item1] = arr[item2];
+//         arr[item2] = temp;
+
+//         item1++;
+//         item2--;
+//     }
+
+//     return arr;
+// }
+
+function revArray(arr)
 {
-    //
+    temp = arr[0];
+    arr[0] = arr[arr.length - 1]
+    arr[arr.length - 1] = temp;
+
+    let newArr = arr.remove[0];
+    
+    return revArray(newArr);
 }
-console.log(arr);
+console.log(revArray([1,2,3,4,5]));
