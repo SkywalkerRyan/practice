@@ -63,4 +63,19 @@ function revArray(arr)
     
     return revArray(newArr);
 }
-console.log(revArray([1,2,3,4,5]));
+// console.log(revArray([1,2,3,4,5]));
+
+function checkPalindrome(s)
+{
+    if(s.length === 1 || s.length === 0) return true;
+
+    if( s[0] === s[s.length - 1] )
+    {
+        checkPalindrome( s.substring(1, s.length - 1) ) ;
+        return true
+    }
+    else
+        return false;
+}
+
+console.log(checkPalindrome("hannah"))
