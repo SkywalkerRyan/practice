@@ -1,4 +1,6 @@
 /**
+ * Make sure to return the recursive function.
+ * 
  * @param {string} s
  * @return {boolean}
  */

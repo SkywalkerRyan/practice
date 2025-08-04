@@ -78,4 +78,11 @@ function checkPalindrome(s)
         return false;
 }
 
-console.log(checkPalindrome("hannah"))
+// console.log(checkPalindrome("hannah"))
+
+function fib(n)
+{
+    
+}
+
+console.log(fib(2));
