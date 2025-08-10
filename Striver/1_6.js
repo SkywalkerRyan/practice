@@ -31,3 +31,8 @@ function countFrequency(n)   // using map
 
 // console.log(countFrequency([1, 2, 2, 1, 3]))
 // console.log(countFrequency([10,5,10,15,10,5]))
+
+function highestFrequency(arr, k)
+{
+    //
+}
