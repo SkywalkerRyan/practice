@@ -23,4 +23,18 @@ function secondLargest(arr:number[]): number[] {
     return [small2, big2];
 }
 // console.log(secondLargest([1,2,4,7,7,5]));
-console.log(secondLargest([1]));
+// console.log(secondLargest([1]));
+
+function checkSorted(arr:number[]): boolean {
+    let ret = true;
+    
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i+1]) {
+            ret = false;
+        }
+    }
+    return ret;
+}
+
+// console.log(checkSorted([1,2,3,4,5]));
+console.log(checkSorted([5,4,6,7,8]));
