@@ -37,4 +37,19 @@ function checkSorted(arr:number[]): boolean {
 }
 
 // console.log(checkSorted([1,2,3,4,5]));
-console.log(checkSorted([5,4,6,7,8]));
+// console.log(checkSorted([5,4,6,7,8]));
+
+function removeDuplicate( arr: number[] ): number[] {
+    for (let i = 1; i < arr.length; i++) {
+        if(arr[i] === arr[i-1]) {
+            arr.splice(i-1, 1)
+            i--;
+        }
+    }
+    
+    return arr
+}
+
+// console.log(removeDuplicate([1,1,2,2,2,3,3]));
+console.log(removeDuplicate([1,1,1,2,2,3,3,3,3,4,4]));
+
