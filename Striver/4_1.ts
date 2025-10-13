@@ -51,5 +51,13 @@ function removeDuplicate( arr: number[] ): number[] {
 }
 
 // console.log(removeDuplicate([1,1,2,2,2,3,3]));
-console.log(removeDuplicate([1,1,1,2,2,3,3,3,3,4,4]));
+// console.log(removeDuplicate([1,1,1,2,2,3,3,3,3,4,4]));
+
+function leftRotate(arr: number[]): number[] {
+    
+    
+    return [0];
+}
+
+console.log(leftRotate([1,2,3,4,5]));
 
