@@ -77,6 +77,17 @@ function moveZeros(nums: number[]): number[] {
     return nums
 }
 
-console.log(moveZeros([1, 0, 2, 3, 0, 4, 0, 1]))
+// console.log(moveZeros([1, 0, 2, 3, 0, 4, 0, 1]))
 // console.log(moveZeros([0, 1, 0, 3, 12]))
 // console.log(moveZeros([1, 2, 0, 1, 0, 4, 0]))
+function linearSearch(nums: number[], num: number): number {
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === num) {
+            return i
+        }
+    }
+
+    return -1
+}
+
+console.log(linearSearch([2, 3, 4, 5, 3], 3))
