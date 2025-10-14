@@ -54,10 +54,16 @@ function removeDuplicate( arr: number[] ): number[] {
 // console.log(removeDuplicate([1,1,1,2,2,3,3,3,3,4,4]));
 
 function leftRotate(arr: number[]): number[] {
+    let newArr: number[] = [];
+    const len = arr.length;
+
+    for( let i = 0; i < len; i++ ){
+        newArr.push(arr[(i + 1) % len])
+    }
     
-    
-    return [0];
+    return newArr;
 }
 
-console.log(leftRotate([1,2,3,4,5]));
+// console.log(leftRotate([1,2,3,4,5]));
+console.log(leftRotate([3]));
 
