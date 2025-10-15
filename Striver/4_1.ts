@@ -100,3 +100,17 @@ function unionArray(nums1: number[], nums2: number[]): number[] {
 
 // console.log(unionArray([1, 2, 3, 4, 5], [2, 3, 4, 4, 5]));
 // console.log(unionArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [2, 3, 4, 4, 5, 11, 12]));
+
+function missingNumbers(nums: number[]) {
+	let len: number = nums.length;
+	let sum: number = (len * (len + 1)) / 2;
+
+	for (let i = 0; i < nums.length; i++) {
+		sum -= nums[i];
+	}
+
+	return sum;
+}
+
+console.log(missingNumbers([0, 2, 3, 1, 4]));
+// console.log(missingNumbers([0, 1, 2, 4, 5, 6]));
