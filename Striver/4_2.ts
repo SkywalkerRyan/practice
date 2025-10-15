@@ -79,5 +79,43 @@ function majorityElement2(nums: number[]): number {
 	return 0;
 }
 
-console.log(majorityElement([7, 0, 0, 1, 7, 7, 2, 7, 7]));
-console.log(majorityElement([1, 1, 1, 2, 1, 2]));
+// console.log(majorityElement([7, 0, 0, 1, 7, 7, 2, 7, 7]));
+// console.log(majorityElement([1, 1, 1, 2, 1, 2]));
+
+// function maxSubArray2(nums: number[]): number {
+// 	let highest: number = nums[0];
+// 	let temp: number = nums[0];
+
+// 	for (let i = 1; i < nums.length; i++) {
+// 		if (temp < 1) temp = 0;
+// 		temp = temp + nums[i];
+// 		if (temp > highest) highest = temp;
+// 	}
+
+// 	return highest;
+// }
+
+function maxSubArray3(nums: number[]): number[] {
+	let highest: number = nums[0];
+	let temp: number = nums[0];
+
+	let start: number = 0;
+	let end: number = 1;
+
+	for (let i = 1; i < nums.length; i++) {
+		if (temp < 1) {
+			temp = 0;
+			start = i;
+		}
+		temp = temp + nums[i];
+		if (temp > highest) {
+			highest = temp;
+			end = i;
+		}
+	}
+
+	return [start, end];
+}
+
+// console.log(maxSubArray([-2, 1]));
+console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
