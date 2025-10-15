@@ -118,4 +118,41 @@ function maxSubArray3(nums: number[]): number[] {
 }
 
 // console.log(maxSubArray([-2, 1]));
-console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+// console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+
+function maxProfit2(nums: number[]): number {
+	let min: number = nums[0];
+	let profit: number = 0;
+
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] < min) min = nums[i];
+
+		profit = Math.max(profit, nums[i] - min);
+	}
+
+	return profit;
+}
+
+// console.log(maxProfit([7, 2, 7, 1, 5, 4]));
+// console.log(maxProfit([7, 6, 4, 3, 1]));
+
+function rearrangeArray2(nums: number[]): number[] {
+	let pos: number[] = [];
+	let neg: number[] = [];
+
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] > 0) pos.push(nums[i]);
+		else neg.push(nums[i]);
+	}
+
+	let newArr: number[] = [];
+	for (let i = 0; i < nums.length / 2; i++) {
+		newArr.push(pos[i]);
+		newArr.push(neg[i]);
+	}
+
+	return newArr;
+}
+
+// console.log(rearrangeArray([3, 1, -2, -5, 2, -4]));
+// console.log(rearrangeArray([-1, 1]));
