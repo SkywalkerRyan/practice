@@ -161,5 +161,24 @@ function singleNumber(nums: number[]): number {
 	return 0;
 }
 // console.log(singleNumber([2, 2, 1]));
-console.log(singleNumber([4, 1, 2, 1, 2]));
+// console.log(singleNumber([4, 1, 2, 1, 2]));
 // console.log(singleNumber([1]));
+
+function longestSubarray(nums: number[], k: number): number {
+	let highest: number = 0;
+	for (let i = 0; i < nums.length; i++) {
+		let temp: number = nums[i];
+		second: for (let j = i + 1; j < nums.length; j++) {
+			temp += nums[j];
+			if (temp === k) {
+				highest = j - i + 1;
+				break second;
+			}
+		}
+	}
+	return highest;
+}
+
+// console.log(longestSubarray([10, 5, 2, 7, 1, 9], 15));
+// console.log(longestSubarray([-3, 2, 1], 6));
+console.log(longestSubarray([-1, 1, 1], 1));

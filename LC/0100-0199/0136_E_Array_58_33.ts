@@ -1,4 +1,4 @@
-function singleNumber(nums: number[]): number {
+function singleNumber2(nums: number[]): number {
 	const numSet: Set<number> = new Set([...nums]);
 	let sum: number = 0;
 
