@@ -164,6 +164,7 @@ function singleNumber(nums: number[]): number {
 // console.log(singleNumber([4, 1, 2, 1, 2]));
 // console.log(singleNumber([1]));
 
+// @todo Try using two pointers again
 function longestSubarray(nums: number[], k: number): number {
 	let highest: number = 0;
 	for (let i = 0; i < nums.length; i++) {

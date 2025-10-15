@@ -36,8 +36,31 @@ function twoSum(nums: number[], target: number): number[] {
 	return [];
 }
 
-console.log(twoSum([2, 6, 5, 8, 11], 14));
-console.log(twoSum([2, 6, 5, 8, 11], 15));
-console.log(twoSum([2, 7, 11, 15], 9));
-console.log(twoSum([3, 2, 4], 6));
-console.log(twoSum([3, 3], 6));
+// console.log(twoSum([2, 6, 5, 8, 11], 14));
+// console.log(twoSum([2, 6, 5, 8, 11], 15));
+// console.log(twoSum([2, 7, 11, 15], 9));
+// console.log(twoSum([3, 2, 4], 6));
+// console.log(twoSum([3, 3], 6));
+
+// @todo try using dutch national flag algo
+function sortZeroOneTwo(nums: number[]): void {
+	let map = new Map();
+
+	for (let i = 0; i < nums.length; i++) {
+		map.set(nums[i], (map.get(nums[i]) || 0) + 1);
+	}
+
+	let id = 0;
+	for (let i = 0; i < 3; i++) {
+		const count = map.get(i);
+		for (let j = 0; j < count; j++) {
+			nums[id] = i;
+			id++;
+		}
+	}
+
+	console.log(nums);
+}
+
+// sortZeroOneTwo([2, 0, 2, 1, 1, 0]);
+// sortZeroOneTwo([2, 0, 1]);
