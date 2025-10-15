@@ -112,5 +112,22 @@ function missingNumbers(nums: number[]) {
 	return sum;
 }
 
-console.log(missingNumbers([0, 2, 3, 1, 4]));
+// console.log(missingNumbers([0, 2, 3, 1, 4]));
 // console.log(missingNumbers([0, 1, 2, 4, 5, 6]));
+
+function findMaxConsecutiveOnes(nums: number[]): number {
+	let highest: number = 0;
+	let temp: number = 0;
+
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] === 1) temp++;
+		else temp = 0;
+
+		if (temp > highest) highest = temp;
+	}
+
+	return highest;
+}
+
+// console.log(findMaxConsecutiveOnes([1, 1, 0, 0, 1, 1, 1, 0]));
+// console.log(findMaxConsecutiveOnes([0, 0, 0, 0, 0, 0, 0, 0]));
