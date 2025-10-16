@@ -156,3 +156,24 @@ function rearrangeArray2(nums: number[]): number[] {
 
 // console.log(rearrangeArray([3, 1, -2, -5, 2, -4]));
 // console.log(rearrangeArray([-1, 1]));
+
+function nextPermutation(nums: number[]): number {
+	return 0;
+}
+
+function leaders(nums: number[]): number[] {
+	let _leaders: number[] = [];
+	let highest: number = -1;
+
+	for (let i = nums.length - 1; i >= 0; i--) {
+		if (nums[i] > highest) {
+			highest = nums[i];
+			_leaders.unshift(highest);
+		}
+	}
+
+	return _leaders;
+}
+
+console.log(leaders([4, 7, 1, 0]));
+console.log(leaders([10, 22, 12, 3, 0, 6]));
