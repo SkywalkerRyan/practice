@@ -1,10 +1,11 @@
 {
-    "compilerOptions": {
-        "module": "ESNext",
-        "moduleResolution": "Node",
-        // ... other options
-    },
-    "ts-node": {
-        "esm": true
-    }
+	"compilerOptions": {
+		"module": "ESNext",
+		"moduleResolution": "Node"
+		// ... other options
+	},
+	"ts-node": {
+		"esm": true
+	},
+	"lib": ["es2017"]
 }

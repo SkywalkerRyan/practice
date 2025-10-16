@@ -199,3 +199,38 @@ function longestConsecutive(nums: number[]): number {
 // console.log(longestConsecutive([1, 0, 1, 2]));
 // console.log(longestConsecutive([100, 200, 1, 3, 2, 4]));
 // console.log(longestConsecutive([3, 8, 5, 7, 6]));
+
+function setZeroes2(matrix: number[][]): void {
+	let rows: Set<number> = new Set();
+	let cols: Set<number> = new Set();
+
+	for (let i = 0; i < matrix.length; i++) {
+		for (let j = 0; j < matrix[0].length; j++) {
+			if (matrix[i][j] === 0) {
+				rows.add(j);
+				cols.add(i);
+			}
+		}
+	}
+
+	for (let i = 0; i < matrix.length; i++) {
+		for (let j = 0; j < matrix[0].length; j++) {
+			if (rows.has(j) || cols.has(i)) {
+				matrix[i][j] = 0;
+			}
+		}
+	}
+
+	console.log(matrix);
+}
+
+setZeroes([
+	[1, 1, 1],
+	[1, 0, 1],
+	[1, 1, 1],
+]);
+setZeroes([
+	[0, 1, 2, 0],
+	[3, 4, 5, 2],
+	[1, 3, 1, 5],
+]);
