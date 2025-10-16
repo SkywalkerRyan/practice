@@ -354,6 +354,6 @@ function subarraySum2(nums: number[], k: number): number {
 	return count;
 }
 
-console.log(subarraySum([0, 0], 0));
+// console.log(subarraySum([0, 0], 0));
 // console.log(subarraySum([1, 1, 1], 2));
 // console.log(subarraySum([1, 2, 3], 3));
