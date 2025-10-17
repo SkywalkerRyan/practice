@@ -177,7 +177,7 @@ function longestSubarray(nums: number[]): number {
 	return 0;
 }
 
-console.log(longestSubarray([9, -3, 3, -1, 6, -5]));
+// console.log(longestSubarray([9, -3, 3, -1, 6, -5]));
 // console.log(longestSubarray([6, -2, 2, -8, 1, 7, 4, -10]));
 // console.log(longestSubarray([1, 0, -5]));
 // console.log(longestSubarray([1, 3, -5, 6, -2]));
@@ -283,7 +283,7 @@ let nums1 = [1, 2, 3, 0, 0, 0],
 // 	m = 1,
 // 	nums2 = [],
 // 	n = 0;
-console.log(mergeSortedArray(nums1, m, nums2, n));
+// mergeSortedArray(nums1, m, nums2, n);
 
 function findMissingRepeatingNumbers(nums: number[]): number[] {
 	let map = new Map();
@@ -306,3 +306,39 @@ function findMissingRepeatingNumbers(nums: number[]): number[] {
 
 // console.log(findMissingRepeatingNumbers([3, 5, 4, 1, 1]));
 // console.log(findMissingRepeatingNumbers([1, 2, 3, 6, 7, 5, 7]));
+
+// function maxProduct(nums: number[]): number {
+// 	let highest: number = nums[0];
+// 	let temp: number;
+
+// 	for (let i = 0; i < nums.length; i++) {
+// 		temp = nums[i];
+// 		for (let j = i + 1; j < nums.length; j++) {
+// 			temp = temp * nums[j];
+// 			if (temp > highest) highest = temp;
+// 		}
+// 	}
+
+// 	return highest;
+// }
+
+function maxProduct(nums: number[]): number {
+	let highest: number = nums[0];
+	let curMax: number = 1;
+	let curMin: number = 1;
+
+	for (let i = 0; i < nums.length; i++) {
+		let tempMax = curMax * nums[i];
+		let tempMin = curMin * nums[i];
+
+		curMax = Math.max(tempMax, tempMin, nums[i]);
+		curMin = Math.min(tempMax, tempMin, nums[i]);
+
+		highest = Math.max(highest, curMax);
+	}
+
+	return highest;
+}
+
+console.log(maxProduct([2, 3, -2, 4]));
+console.log(maxProduct([-2, 0, -1]));

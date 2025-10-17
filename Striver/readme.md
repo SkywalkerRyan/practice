@@ -10,6 +10,8 @@
     Largest subarray with 0 sum, need to understand properly
     Count number of subarrays with given xor K, comeback after bit manipulation basics
     Merge two sorted arrays without extra space, Try using two pointers
+    Count Inversions, Return after sorting
+    Reverse pair, Return after sorting
 
 # Strings
 
