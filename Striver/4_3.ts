@@ -222,7 +222,7 @@ function subarraysWithXorK(nums: number) {
 // 	return intervals;
 // }
 
-function merge(intervals: number[][]): number[][] {
+function mergeIntervals(intervals: number[][]): number[][] {
 	intervals.sort((a, b) => a[0] - b[0]);
 	let newArr = [];
 
@@ -238,31 +238,49 @@ function merge(intervals: number[][]): number[][] {
 	return newArr;
 }
 
-console.log(
-	merge([
-		[1, 3],
-		[2, 6],
-		[8, 10],
-		[15, 18],
-	])
-);
-console.log(
-	merge([
-		[1, 4],
-		[4, 5],
-	])
-);
-console.log(
-	merge([
-		[4, 7],
-		[1, 4],
-	])
-);
-console.log(merge([[1, 3]]));
-console.log(
-	merge([
-		[1, 4],
-		[0, 2],
-		[3, 5],
-	])
-);
+// console.log(
+// 	merge([
+// 		[1, 3],
+// 		[2, 6],
+// 		[8, 10],
+// 		[15, 18],
+// 	])
+// );
+// console.log(
+// 	merge([
+// 		[1, 4],
+// 		[4, 5],
+// 	])
+// );
+// console.log(
+// 	merge([
+// 		[4, 7],
+// 		[1, 4],
+// 	])
+// );
+// console.log(merge([[1, 3]]));
+// console.log(
+// 	merge([
+// 		[1, 4],
+// 		[0, 2],
+// 		[3, 5],
+// 	])
+// );
+
+function mergeSortedArray(nums1: number[], m: number, nums2: number[], n: number): void {
+	for (let i = m; i < nums1.length; i++) {
+		nums1[i] = nums2[i - m];
+	}
+	nums1.sort((a, b) => a - b);
+	console.log(nums1);
+}
+
+let nums1 = [1, 2, 3, 0, 0, 0],
+	m = 3,
+	nums2 = [2, 5, 6],
+	n = 3;
+// let nums1 = [1],
+// 	m = 1,
+// 	nums2 = [],
+// 	n = 0;
+console.log(mergeSortedArray(nums1, m, nums2, n));

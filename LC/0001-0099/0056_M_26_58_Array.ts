@@ -1,4 +1,4 @@
-function merge(intervals: number[][]): number[][] {
+function mergeIntervals1(intervals: number[][]): number[][] {
 	let len = intervals.length;
 	intervals.sort((a, b) => a[0] - b[0]);
 
@@ -16,7 +16,7 @@ function merge(intervals: number[][]): number[][] {
 }
 
 console.log(
-	merge([
+	mergeIntervals1([
 		[1, 3],
 		[2, 6],
 		[8, 10],
@@ -24,20 +24,20 @@ console.log(
 	])
 );
 console.log(
-	merge([
+	mergeIntervals1([
 		[1, 4],
 		[4, 5],
 	])
 );
 console.log(
-	merge([
+	mergeIntervals1([
 		[4, 7],
 		[1, 4],
 	])
 );
-console.log(merge([[1, 3]]));
+console.log(mergeIntervals1([[1, 3]]));
 console.log(
-	merge([
+	mergeIntervals1([
 		[1, 4],
 		[0, 2],
 		[3, 5],
