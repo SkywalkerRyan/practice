@@ -1,10 +1,10 @@
-# Arrays
+# 3 Arrays
 
-## Easy
+## 3.1 Easy
 
-## Medium
+## 3.2 Medium
 
-## Hard
+## 3.3 Hard
 
     Majority Element (n/3 times) Try using Bayer Moore's algorithm
     Largest subarray with 0 sum, need to understand properly
@@ -13,9 +13,9 @@
     Count Inversions, Return after sorting
     Reverse pair, Return after sorting
 
-# Strings
+# 5 Strings
 
-# Linked List
+# 6 Linked List
 
 # Stacks & Queues
 
