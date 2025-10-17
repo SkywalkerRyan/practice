@@ -1,5 +1,5 @@
 function threeSum(nums: number[]): number[][] {
-	let newArr = [];
+	let newArr: number[][] = [];
 	nums = nums.sort((a, b) => a - b);
 
 	for (let i = 0; i < nums.length; i++) {
@@ -14,8 +14,8 @@ function threeSum(nums: number[]): number[][] {
 			else {
 				newArr.push([nums[i], nums[j], nums[k]]);
 
-				while (nums[j] === nums[j + 1]) j++;
-				while (nums[k] === nums[k - 1]) k--;
+				while (j < k && nums[j] === nums[j + 1]) j++;
+				while (j < k && nums[k] === nums[k - 1]) k--;
 
 				j++;
 				k--;

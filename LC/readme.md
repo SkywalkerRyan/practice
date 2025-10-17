@@ -1,1 +1,1 @@
-number_difficulty_time_space_topics
+Naming convention: number_difficulty_time_space_topics
