@@ -97,3 +97,34 @@ function isIsomorphic(s: string, t: string): boolean {
 // console.log(isIsomorphic('foo', 'bar'));
 // console.log(isIsomorphic('paper', 'title'));
 // console.log(isIsomorphic('badc', 'baba'));
+
+// Doesnt work for all cases
+// function rotateString(s: string, goal: string): boolean {
+// 	let startingIndex: number = 0;
+// 	for (let i = 0; i < s.length; i++) {
+// 		if (s[0] === goal[i]) {
+// 			startingIndex = i;
+// 			break;
+// 		}
+// 	}
+
+// 	for (let i = 0; i < s.length; i++) {
+// 		let goalIndex: number = (i + startingIndex) % s.length;
+// 		if (s[i] !== goal[goalIndex]) return false;
+// 	}
+
+// 	return true;
+// }
+
+function rotateString(s: string, goal: string): boolean {
+	for (let i = 0; i < s.length; i++) {
+		goal = goal.substring(1) + goal.substring(0, 1);
+		if (s === goal) return true;
+	}
+
+	return false;
+}
+
+// console.log(rotateString('abcde', 'cdeab'));
+// console.log(rotateString('abcde', 'abced'));
+// console.log(rotateString('defdefdefabcabc', 'defdefabcabcdef'));
