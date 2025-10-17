@@ -340,5 +340,5 @@ function maxProduct(nums: number[]): number {
 	return highest;
 }
 
-console.log(maxProduct([2, 3, -2, 4]));
-console.log(maxProduct([-2, 0, -1]));
+// console.log(maxProduct([2, 3, -2, 4]));
+// console.log(maxProduct([-2, 0, -1]));
