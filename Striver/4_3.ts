@@ -284,3 +284,25 @@ let nums1 = [1, 2, 3, 0, 0, 0],
 // 	nums2 = [],
 // 	n = 0;
 console.log(mergeSortedArray(nums1, m, nums2, n));
+
+function findMissingRepeatingNumbers(nums: number[]): number[] {
+	let map = new Map();
+	let len: number = nums.length;
+	let double: number;
+	let sum: number = 0;
+	let _sum: number = 0;
+
+	for (let i = 0; i < nums.length; i++) {
+		sum += nums[i];
+		map.set(nums[i], (map.get(nums[i]) || 0) + 1);
+		if (map.get(nums[i]) > 1) double = nums[i];
+	}
+
+	_sum = len * ((len + 1) / 2);
+	let missing: number = _sum - sum + double;
+
+	return [double, missing];
+}
+
+// console.log(findMissingRepeatingNumbers([3, 5, 4, 1, 1]));
+// console.log(findMissingRepeatingNumbers([1, 2, 3, 6, 7, 5, 7]));
