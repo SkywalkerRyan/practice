@@ -27,11 +27,13 @@
 
 # Sorting
 
+    After finishing basics return to Count Inversions and Reverse pair in 3.3
+
 # Searching
 
 # Bit Manipulation
 
-    After finishing basics return to "Count number of subarrays with given xor K" in
+    After finishing basics return to "Count number of subarrays with given xor K" in 3.3
 
 # Tree/BST/Trie
 

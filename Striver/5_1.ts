@@ -49,4 +49,31 @@ function reverseWords(s: string): string {
 
 // console.log(reverseWords('the sky is blue'));
 // console.log(reverseWords('  hello world  '));
-console.log(reverseWords('a good   example'));
+// console.log(reverseWords('a good   example'));
+
+function largestOddNumber(num: string): string {
+	for (let i = num.length - 1; i >= 0; i--) {
+		if (parseInt(num[i]) % 2 === 0) num = num.slice(0, -1);
+		else return num;
+	}
+
+	return '';
+}
+// console.log(largestOddNumber('52'));
+// console.log(largestOddNumber('4206'));
+// console.log(largestOddNumber('35427'));
+
+function longestCommonPrefix(strs: string[]): string {
+	let pref: string = '';
+	strs = strs.sort();
+
+	for (let i = 0; i < strs[0].length; i++) {
+		if (strs[0][i] === strs[strs.length - 1][i]) pref += strs[0][i];
+		else break;
+	}
+
+	return pref;
+}
+
+// console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
+console.log(longestCommonPrefix(['dog', 'racecar', 'car']));
