@@ -1,4 +1,4 @@
-function removeOuterParentheses(s: string): string {
+function removeOuterParentheses1(s: string): string {
 	let count: number = 0;
 	let result: string = '';
 
@@ -11,6 +11,6 @@ function removeOuterParentheses(s: string): string {
 	return result;
 }
 
-console.log(removeOuterParentheses('(()())(())'));
-// console.log(removeOuterParentheses('(()())(())(()(()))'));
-// console.log(removeOuterParentheses('()()'));
+console.log(removeOuterParentheses1('(()())(())'));
+// console.log(removeOuterParentheses1('(()())(())(()(()))'));
+// console.log(removeOuterParentheses1('()()'));
