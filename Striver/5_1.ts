@@ -128,3 +128,36 @@ function rotateString(s: string, goal: string): boolean {
 // console.log(rotateString('abcde', 'cdeab'));
 // console.log(rotateString('abcde', 'abced'));
 // console.log(rotateString('defdefdefabcabc', 'defdefabcabcdef'));
+
+// function isAnagram(s: string, t: string): boolean {
+// 	s = s.split('').sort().join('');
+// 	t = t.split('').sort().join('');
+
+// 	if (s === t) return true;
+
+// 	return false;
+// }
+
+function isAnagram(s: string, t: string): boolean {
+	if (s.length !== t.length) return false;
+
+	let map = new Map();
+
+	for (let i = 0; i < s.length; i++) {
+		map.set(s[i], (map.get(s[i]) || 0) + 1);
+	}
+
+	for (let i = 0; i < s.length; i++) {
+		if (!map.has(t[i])) return false;
+		else map.set(t[i], map.get(t[i]) - 1);
+	}
+
+	for (const [key, val] of map) {
+		if (val !== 0) return false;
+	}
+
+	return true;
+}
+
+// console.log(isAnagram('anagram', 'nagaram'));
+// console.log(isAnagram('rat', 'car'));
