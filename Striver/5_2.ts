@@ -107,3 +107,50 @@ function myAtoi(s: string): number {
 // console.log(myAtoi('words and 987'));
 // console.log(myAtoi('+-12'));
 // console.log(myAtoi('  +  413'));
+
+// function uniqueCharInSubstring(nums: string, k: number): number {
+// 	let count: number = 0;
+
+// 	let left: number = 0;
+// 	let right: number = 1;
+
+// 	while (right < nums.length) {
+// 		let temp: string = '';
+// 		for (let i = left; i <= right; i++) {
+// 			temp += nums[i];
+// 		}
+
+// 		console.log('temp : ', temp);
+
+// 		const tempCount: number = new Set(temp).size;
+// 		if (tempCount < k) right++;
+// 		else if (tempCount > k) left++;
+// 		else {
+// 			count++;
+// 			right++;
+// 		}
+// 	}
+
+// 	return count;
+// }
+
+function uniqueCharInSubstring(nums: string, k: number): number {
+	let count: number = 0;
+
+	for (let i = 0; i < nums.length; i++) {
+		let temp: string = nums[i];
+		for (let j = i + 1; j < nums.length; j++) {
+			temp += nums[j];
+
+			if (new Set(temp).size === k) {
+				console.log(temp);
+				count++;
+			}
+		}
+	}
+
+	return count;
+}
+
+// console.log(uniqueCharInSubstring('pqpqs', 2));
+// console.log(uniqueCharInSubstring('abcbaa', 3));

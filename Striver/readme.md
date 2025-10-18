@@ -15,6 +15,10 @@
 
 # 5 Strings
 
+## 5.1 Easy
+
+## 5.2 Medium
+
 # 6 Linked List
 
 # Stacks & Queues
