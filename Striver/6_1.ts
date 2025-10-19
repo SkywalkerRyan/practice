@@ -11,3 +11,15 @@ function deleteNode(node: ListNode | null): void {
 	node.val = node.next.val;
 	node.next = node.next.next;
 }
+
+function countLength(head: ListNode): number {
+	let count: number = 0;
+	let curr = head;
+
+	while (curr.next) {
+		count++;
+		curr = curr.next;
+	}
+
+	return count;
+}
