@@ -47,7 +47,19 @@ function deleteTail(head: ListNode): void {
 }
 
 function reverseDLL(head: ListNode): ListNode {
-	let curr: ListNode = head;
+	let curr: ListNode = head.next;
 
-	while (curr.next) {}
+	while (curr.next) {
+		let prev: ListNode = head.prev;
+
+		let temp = prev.prev;
+		prev.prev = prev.next;
+		prev.next = temp;
+
+		curr = curr.next;
+	}
+
+	let temp = curr.prev;
+	curr.prev = curr.next;
+	curr.next = temp;
 }
