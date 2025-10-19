@@ -12,6 +12,18 @@ function deleteNode(node: ListNode | null): void {
 	node.next = node.next.next;
 }
 
+function deleteLastNode(head: ListNode) {
+	let prev = head;
+	let curr = head.next;
+
+	while (curr.next) {
+		prev = curr;
+		curr = curr.next;
+	}
+
+	prev.next = null;
+}
+
 function countLength(head: ListNode): number {
 	let count: number = 0;
 	let curr = head;
