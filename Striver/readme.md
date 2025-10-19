@@ -19,6 +19,8 @@
 
 ## 5.2 Medium
 
+    5.2.7 Sum of Beauty of all substring, How is this working?
+
 # 6 Linked List
 
 # Stacks & Queues

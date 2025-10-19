@@ -1,4 +1,4 @@
-function beautySum(s: string): number {
+function beautySum1(s: string): number {
 	let sum = 0;
 
 	for (let i = 0; i < s.length; i++) {
@@ -19,5 +19,5 @@ function beautySum(s: string): number {
 	return sum;
 }
 
-console.log(beautySum('aabcb'));
-console.log(beautySum('aabcbaa'));
+console.log(beautySum1('aabcb'));
+console.log(beautySum1('aabcbaa'));
