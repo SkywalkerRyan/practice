@@ -23,3 +23,15 @@ function countLength(head: ListNode): number {
 
 	return count;
 }
+
+function searchKey(head: ListNode | null, key: number): boolean {
+	let curr: ListNode = head;
+
+	while (curr.next) {
+		if (key === curr.val) return true;
+
+		curr = curr.next;
+	}
+
+	return false;
+}
