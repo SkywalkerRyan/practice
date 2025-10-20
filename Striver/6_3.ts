@@ -107,6 +107,25 @@ function hasCycle(head: ListNode | null): boolean {
 	let fast = head;
 
 	while (fast && fast.next) {
+		slow = slow.next;
+		fast = fast.next.next;
+
+		if (slow === fast) return true;
+	}
+
+	return false;
+}
+
+function detectCycle(head: ListNode | null): ListNode | null {
+	if (!head) return null;
+	if (!head.next) return false;
+
+	let slow = head;
+	let fast = head;
+
+	// let count =
+
+	while (fast && fast.next) {
 		if (slow === fast) return true;
 
 		slow = slow.next;
