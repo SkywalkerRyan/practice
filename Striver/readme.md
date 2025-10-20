@@ -23,6 +23,8 @@
 
 # 6 Linked List
 
+    6.3.3 Reverse a LL [Recursive], Come back after recursion
+
 # Stacks & Queues
 
 # Hash Tables
@@ -31,15 +33,17 @@
 
 # Recursion/Backtracking
 
+    After basic return tu Reverse a LL [Recursive] in 6.3
+
 # Sorting
 
-    After finishing basics return to Count Inversions and Reverse pair in 3.3
+    After basic return to Count Inversions and Reverse pair in 3.3
 
 # Searching
 
 # Bit Manipulation
 
-    After finishing basics return to "Count number of subarrays with given xor K" in 3.3
+    After basic return to "Count number of subarrays with given xor K" in 3.3
 
 # Tree/BST/Trie
 
