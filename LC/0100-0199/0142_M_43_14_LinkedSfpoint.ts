@@ -12,9 +12,9 @@
 
 import { Node as ListNode } from '../../Practices/LinkedList/node.js';
 
-function hasCycle(head: ListNode | null): boolean {
-	if (!head) return false;
-	if (!head.next) return false;
+function detectCycle(head: ListNode | null): ListNode | null {
+	if (!head) return null;
+	if (!head.next) return null;
 
 	let slow = head;
 	let fast = head;
@@ -23,8 +23,19 @@ function hasCycle(head: ListNode | null): boolean {
 		slow = slow.next;
 		fast = fast.next.next;
 
-		if (slow === fast) return true;
+		if (slow === fast) break;
 	}
 
-	return false;
+	if (!fast.next || !fast.next.next) return null;
+
+	fast = head;
+
+	while (slow.next) {
+		slow = slow.next;
+		fast = fast.next;
+
+		if (slow === fast) return slow;
+	}
+
+	return null;
 }

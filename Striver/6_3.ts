@@ -69,38 +69,8 @@ function reverseList(head: ListNode | null): ListNode | null {
 	return curr;
 }
 
-//
-//
-//
-
-// function hasCycle(head: ListNode | null): boolean {
-// 	if (!head || !head.next) return false;
-
-// 	let curr: ListNode = head;
-
-// 	let map: number[] = [];
-// 	let count = 0;
-// 	let id = 0;
-
-// 	while (curr.next) {
-// 		if (count > 0) {
-
-// 		}
-// 		if (map.includes(curr.val)) {
-// 			count++;
-// 			id = map.indexOf(curr.val);
-// 		}
-
-// 		map.push(curr.val);
-
-// 		curr = curr.next;
-// 	}
-
-// 	return false;
-// }
-
 function hasCycle(head: ListNode | null): boolean {
-	if (!head) return null;
+	if (!head) return false;
 	if (!head.next) return false;
 
 	let slow = head;
@@ -118,19 +88,28 @@ function hasCycle(head: ListNode | null): boolean {
 
 function detectCycle(head: ListNode | null): ListNode | null {
 	if (!head) return null;
-	if (!head.next) return false;
+	if (!head.next) return null;
 
 	let slow = head;
 	let fast = head;
 
-	// let count =
-
 	while (fast && fast.next) {
-		if (slow === fast) return true;
-
 		slow = slow.next;
 		fast = fast.next.next;
+
+		if (slow === fast) break;
 	}
 
-	return false;
+	if (!fast.next || !fast.next.next) return null;
+
+	fast = head;
+
+	while (slow.next) {
+		slow = slow.next;
+		fast = fast.next;
+
+		if (slow === fast) return slow;
+	}
+
+	return null;
 }
