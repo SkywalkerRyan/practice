@@ -219,3 +219,23 @@ function oddEvenList(head: ListNode | null): ListNode | null {
 
 	return head;
 }
+
+function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
+	if (!head) return null;
+
+	let curr = head;
+	let slow = head;
+
+	for (let i = 0; i < n; i++) curr = curr.next;
+
+	while (curr) {
+		curr = curr.next;
+		slow = slow.next;
+	}
+
+	// if (!slow.next.next) slow.next = null;
+	// else
+	slow.next = slow.next.next;
+
+	return head;
+}
