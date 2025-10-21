@@ -100,7 +100,7 @@ function detectCycle(head: ListNode | null): ListNode | null {
 		if (slow === fast) break;
 	}
 
-	if (!fast.next || !fast.next.next) return null;
+	if (!fast || !fast.next) return null;
 
 	fast = head;
 
@@ -112,4 +112,90 @@ function detectCycle(head: ListNode | null): ListNode | null {
 	}
 
 	return null;
+}
+
+function lengthOfLoop(head: ListNode | null): ListNode | null {
+	if (!head) return 0;
+	if (!head.next) return 0;
+
+	let slow = head;
+	let fast = head;
+
+	while (fast && fast.next) {
+		slow = slow.next;
+		fast = fast.next.next;
+
+		if (slow === fast) break;
+	}
+
+	if (!fast || !fast.next) return 0;
+
+	fast = head;
+	let count = 1;
+
+	while (slow.next) {
+		slow = slow.next;
+		fast = fast.next;
+
+		if (slow === fast) return count;
+		count++;
+	}
+
+	return 0;
+}
+
+// export function isPalindrome(head: ListNode | null): boolean {
+// 	if (!head) return false;
+// 	if (!head.next) return true;
+
+// 	let curr = head;
+// 	let arr = [];
+
+// 	while (curr.next) {
+// 		arr.push(curr.val);
+// 		curr = curr.next;
+// 	}
+// 	arr.push(curr.val);
+
+// 	let len = arr.length - 1;
+// 	for (let i = 0; i < len / 2; i++) {
+// 		if (arr[i] !== arr[len - i]) return false;
+// 	}
+
+// 	return true;
+// }
+
+export function isPalindrome(head: ListNode | null): boolean {
+	if (!head) return false;
+	if (!head.next) return true;
+
+	let slow = head;
+	let fast = head;
+
+	let arr = [];
+
+	while (fast && fast.next) {
+		arr.push(slow.val);
+		slow = slow.next;
+		fast = fast.next.next;
+	}
+
+	let len = arr.length - 1;
+	if (arr[len] !== slow.val) {
+		arr.pop();
+		len--;
+	}
+
+	slow = slow.next;
+
+	while (slow.next) {
+		if (arr[len] !== slow.val) {
+			return false;
+		}
+
+		len--;
+		slow = slow.next;
+	}
+
+	return true;
 }

@@ -10,32 +10,33 @@
  * }
  */
 
-import { Node as ListNode } from '../../Practices/LinkedList/node.js';
-
-function detectCycle(head: ListNode | null): ListNode | null {
-	if (!head) return null;
-	if (!head.next) return null;
+function isPalindrome(head: ListNode | null): boolean {
+	if (!head) return false;
+	if (!head.next) return true;
 
 	let slow = head;
 	let fast = head;
 
+	let arr = [];
+
 	while (fast && fast.next) {
+		arr.push(slow.val);
 		slow = slow.next;
 		fast = fast.next.next;
-
-		if (slow === fast) break;
 	}
 
-	if (!fast || !fast.next) return null;
+	if (fast) slow = slow.next;
 
-	fast = head;
+	let len = arr.length - 1;
 
-	while (slow.next) {
+	while (slow) {
+		if (arr[len] !== slow.val) {
+			return false;
+		}
+
 		slow = slow.next;
-		fast = fast.next;
-
-		if (slow === fast) return slow;
+		len--;
 	}
 
-	return null;
+	return true;
 }
