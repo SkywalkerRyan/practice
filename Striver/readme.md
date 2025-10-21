@@ -31,6 +31,7 @@ https://algomap.io/roadmap
     6.3.3 Reverse a LL [Recursive], Come back after recursion
     6.3.7 Check if LL is palindrome or not, Try by reversing the list
     6.3.8 Segrregate odd and even nodes in LL, how?!
+    6.3.9 Remove Nth Node From End of List, how?!
 
 # Stacks & Queues
 
