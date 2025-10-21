@@ -134,11 +134,11 @@ function lengthOfLoop(head: ListNode | null): ListNode | null {
 	let count = 1;
 
 	while (slow.next) {
-		slow = slow.next;
-		fast = fast.next;
-
 		if (slow === fast) return count;
 		count++;
+
+		slow = slow.next;
+		fast = fast.next;
 	}
 
 	return 0;

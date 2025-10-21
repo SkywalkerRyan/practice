@@ -1,6 +1,11 @@
+https://algomap.io/roadmap
+
 # 3 Arrays
 
 ## 3.1 Easy
+
+    3.1.9 Find the Union, Try using two pointer
+    3.1.12 Longest subarray with given sum K(positives), Try using two pointer
 
 ## 3.2 Medium
 
@@ -25,6 +30,7 @@
 
     6.3.3 Reverse a LL [Recursive], Come back after recursion
     6.3.7 Check if LL is palindrome or not, Try by reversing the list
+    6.3.8 Segrregate odd and even nodes in LL, how?!
 
 # Stacks & Queues
 
