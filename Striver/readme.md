@@ -24,6 +24,7 @@
 # 6 Linked List
 
     6.3.3 Reverse a LL [Recursive], Come back after recursion
+    6.3.7 Check if LL is palindrome or not, Try by reversing the list
 
 # Stacks & Queues
 

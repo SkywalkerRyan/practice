@@ -183,4 +183,51 @@ export class LinkedList {
 
 		// return true;
 	}
+
+	// oddEvenList() {
+	// 	let head = this.head;
+
+	// 	let prev = head;
+	// 	let evenStart = head.next;
+	// 	let even = evenStart;
+	// 	let curr = head.next.next;
+	// 	let count = 3;
+
+	// 	console.log('evenStart : ', evenStart);
+
+	// 	while (curr.next) {
+	// 		count++;
+
+	// 		if (count % 2 !== 0) {
+	// 			prev = curr;
+	// 		} else {
+	// 			prev.next = curr.next;
+	// 			even.next = curr;
+	// 		}
+	// 		curr = curr.next;
+	// 	}
+
+	// 	even.next = null;
+	// 	curr.next = evenStart;
+
+	// 	return head;
+	// }
+	oddEvenListDouble() {
+		let head = this.head;
+
+		let odd = head;
+		let even = head.next;
+		let evenStart = head.next;
+
+		while (even && even.next) {
+			odd.next = even;
+			odd = odd.next;
+			even.next = odd;
+			even = even.next;
+		}
+
+		odd.next = evenStart;
+
+		return head;
+	}
 }

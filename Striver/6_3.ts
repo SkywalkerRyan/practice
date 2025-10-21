@@ -199,3 +199,23 @@ export function isPalindrome(head: ListNode | null): boolean {
 
 	return true;
 }
+
+function oddEvenList(head: ListNode | null): ListNode | null {
+	if (!head) return null;
+	if (!head.next) return head;
+
+	let odd = head;
+	let even = head.next;
+	let evenStart = head.next;
+
+	while (even && even.next) {
+		odd.next = even;
+		odd = odd.next;
+		even.next = odd;
+		even = even.next;
+	}
+
+	odd.next = evenStart;
+
+	return head;
+}
