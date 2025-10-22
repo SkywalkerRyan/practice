@@ -285,3 +285,24 @@ function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): Li
 
 	return null;
 }
+
+function addOne(head: ListNode) {
+	let revHead = reverseList(head);
+	let curr = revHead;
+
+	let pass = 1;
+	while (curr) {
+		let temp = curr.val + pass;
+		if (temp > 9) curr.val = 0;
+		else pass = 0;
+
+		curr = curr.next;
+	}
+
+	if (curr.val > 9) {
+		curr.val = 0;
+		curr.next = new ListNode(1, null);
+	}
+
+	return reverseList(revHead);
+}
