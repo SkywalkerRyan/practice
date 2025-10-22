@@ -26,7 +26,15 @@ https://algomap.io/roadmap
 
     5.2.7 Sum of Beauty of all substring, How is this working?
 
+# Hash Tables
+
+# Two pointers/ Sliding Window
+
+# Stacks & Queues
+
 # 6 Linked List
+
+## 6.3 Medium LL
 
     6.3.3 Reverse a LL [Recursive], Come back after recursion
     6.3.7 Check if LL is palindrome or not, Try by reversing the list
@@ -35,11 +43,9 @@ https://algomap.io/roadmap
     6.3.11 Sort List, return after sorting basic
     6.3.12 Sort a LL of 0's 1's and 2's by changing links, return after sorting basic
 
-# Stacks & Queues
+## 6.4 Medium DLL
 
-# Hash Tables
-
-# Two pointers/ Sliding Window
+## 6.5 Hard LL
 
 # Recursion/Backtracking
 

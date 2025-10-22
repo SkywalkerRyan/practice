@@ -293,8 +293,10 @@ function addOne(head: ListNode) {
 	let pass = 1;
 	while (curr) {
 		let temp = curr.val + pass;
-		if (temp > 9) curr.val = 0;
-		else pass = 0;
+		if (temp > 9) {
+			curr.val = 0;
+			pass = 1;
+		} else pass = 0;
 
 		curr = curr.next;
 	}
@@ -305,4 +307,89 @@ function addOne(head: ListNode) {
 	}
 
 	return reverseList(revHead);
+}
+
+// function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+// 	let curr1 = l1;
+// 	let curr2 = l2;
+// 	let retRes = new ListNode();
+// 	let result = retRes;
+
+// 	let pass = 0;
+// 	while (curr1 && curr2) {
+// 		result.val = curr1.val + curr2.val + pass;
+// 		let temp = new ListNode();
+
+// 		if (result.val > 9) {
+// 			result.val = result.val - 10;
+// 			pass = 1;
+// 		} else {
+// 			pass = 0;
+// 		}
+// 		curr1 = curr1.next;
+// 		curr2 = curr2.next;
+// 		result.next = temp;
+// 		result = result.next;
+// 	}
+
+// 	while (curr1) {
+// 		result.val = curr1.val + pass;
+// 		let temp = new ListNode();
+
+// 		if (result.val > 9) {
+// 			result.val = result.val - 10;
+// 			pass = 1;
+// 		} else {
+// 			pass = 0;
+// 		}
+// 		curr1 = curr1.next;
+// 		result.next = temp;
+// 		result = result.next;
+// 	}
+
+// 	while (curr2) {
+// 		result.val = curr2.val + pass;
+// 		let temp = new ListNode();
+
+// 		if (result.val > 9) {
+// 			result.val = result.val - 10;
+// 			pass = 1;
+// 		} else {
+// 			pass = 0;
+// 		}
+// 		curr2 = curr2.next;
+// 		result.next = temp;
+// 		result = result.next;
+// 	}
+
+// 	return retRes;
+// }
+
+function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
+	let temp = new ListNode();
+	let curr = temp;
+	let total = 0;
+	let carry = 0;
+
+	while (l1 || l2 || carry) {
+		total = carry;
+
+		if (l1) {
+			total += l1.val;
+			l1 = l1.next;
+		}
+
+		if (l2) {
+			total += l2.val;
+			l2 = l2.next;
+		}
+
+		let sum = total % 10;
+		carry = Math.floor(total / 10);
+
+		temp.next = new ListNode(sum);
+		temp = temp.next;
+	}
+
+	return curr.next;
 }
