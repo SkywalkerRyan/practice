@@ -32,6 +32,8 @@ https://algomap.io/roadmap
     6.3.7 Check if LL is palindrome or not, Try by reversing the list
     6.3.8 Segrregate odd and even nodes in LL, how?!
     6.3.9 Remove Nth Node From End of List, how?!
+    6.3.11 Sort List, return after sorting basic
+    6.3.12 Sort a LL of 0's 1's and 2's by changing links, return after sorting basic
 
 # Stacks & Queues
 
@@ -41,11 +43,13 @@ https://algomap.io/roadmap
 
 # Recursion/Backtracking
 
-    After basic return tu Reverse a LL [Recursive] in 6.3
+    After basic return to Reverse a LL [Recursive] in 6.3.3
 
 # Sorting
 
     After basic return to Count Inversions and Reverse pair in 3.3
+    After basic return to Sort list in 6.3.11
+    After basic return to Sort a LL of 0's 1's and 2's by changing links 6.3.12
 
 # Searching
 

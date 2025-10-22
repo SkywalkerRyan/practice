@@ -263,3 +263,25 @@ function deleteMiddle(head: ListNode | null): ListNode | null {
 
 	return head;
 }
+
+function getIntersectionNode(headA: ListNode | null, headB: ListNode | null): ListNode | null {
+	let currA = headA;
+	let currB = headB;
+
+	let mapA = new Map();
+
+	while (currA.next) {
+		mapA.set(currA, (mapA.get(currA) || 0) + 1);
+
+		currA = currA.next;
+	}
+
+	while (currB.next) {
+		if (mapA.has(currB)) {
+			return currB;
+		}
+		currB = currB.next;
+	}
+
+	return null;
+}
