@@ -10,12 +10,14 @@
 ## Striver 3.2.3 - 3.2.13
 
     D 20251016
+    W 20251022
 
 # Thursday 20251016
 
 ## Striver 3.2.14 - 3.3.12, 5.1.1
 
     D 20251017
+    W 20251023
 
 # Friday 20251017
 
@@ -49,8 +51,6 @@
 
 # Wednesday 20251022
 
-## AlgoMap Array 1
-
 # Thursday 20251023
 
-## AlgoMap Array 2
+## AlgoMap Array 1

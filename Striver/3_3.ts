@@ -295,7 +295,10 @@ function findMissingRepeatingNumbers(nums: number[]): number[] {
 	for (let i = 0; i < nums.length; i++) {
 		sum += nums[i];
 		map.set(nums[i], (map.get(nums[i]) || 0) + 1);
-		if (map.get(nums[i]) > 1) double = nums[i];
+		if (map.get(nums[i]) > 1) {
+			double = nums[i];
+			break;
+		}
 	}
 
 	_sum = len * ((len + 1) / 2);
