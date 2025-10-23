@@ -9,6 +9,12 @@ https://algomap.io/roadmap
 
 ## 3.2 Medium
 
+    3.2.2 Sort an array of 0's 1's and 2's, Try using Dutch National Flag algo
+    3.2.3 Majority Element (>n/2 times), Try using boyer moore's voting algorithm
+    3.2.8 Next Permutation,
+    3.2.10 Longest Consecutive Sequence in an Array, Try using set
+    3.2.14 Subarray Sum Equals K, Try without brute force
+
 ## 3.3 Hard
 
     Majority Element (n/3 times) Try using Bayer Moore's algorithm
