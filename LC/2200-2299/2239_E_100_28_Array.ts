@@ -1,4 +1,4 @@
-function findClosestNumber(nums: number[]): number {
+function findClosestNumber1(nums: number[]): number {
 	let closest = nums[0];
 
 	for (let i = 0; i < nums.length; i++) {
@@ -13,6 +13,6 @@ function findClosestNumber(nums: number[]): number {
 	return closest;
 }
 
-console.log(findClosestNumber([2, 1, 1, -1, 100000]));
-// console.log(findClosestNumber([2, -1, 1]));
-// console.log(findClosestNumber([-100000, -100000]));
+console.log(findClosestNumber1([2, 1, 1, -1, 100000]));
+// console.log(findClosestNumber1([2, -1, 1]));
+// console.log(findClosestNumber1([-100000, -100000]));

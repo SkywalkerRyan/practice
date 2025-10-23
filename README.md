@@ -49,4 +49,8 @@
 
 # Wednesday 20251022
 
+## AlgoMap Array 1
+
 # Thursday 20251023
+
+## AlgoMap Array 2
