@@ -9,9 +9,9 @@ function spiralOrder(matrix: number[][]): number[] {
 	let i = 0;
 
 	while (left <= right && top <= bottom) {
-		i = top;
+		i = left;
 		while (i <= right) {
-			newArr.push(matrix[left][i]);
+			newArr.push(matrix[top][i]);
 			i++;
 		}
 		top++;

@@ -27,6 +27,7 @@ https://algomap.io/roadmap
 ## AM 1
 
     1.10 Merge two sorted arrays without extra space, Try using two pointers
+    1.15 H Index, What the fuck is it even asking?!
 
 # Strings
 
