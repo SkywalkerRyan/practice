@@ -36,6 +36,8 @@ https://algomap.io/roadmap
 
 ## AM 1
 
+    AM 1.9 Remove element
+
 # Hash Tables
 
 # Two pointers/ Sliding Window
