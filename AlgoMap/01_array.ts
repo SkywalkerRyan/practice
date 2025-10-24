@@ -85,7 +85,7 @@ function removeElement(nums: number[], val: number): number {
 	return j;
 }
 
-console.log(removeElement([3, 2, 2, 3], 3));
+// console.log(removeElement([3, 2, 2, 3], 3));
 // console.log(removeElement([1], 1));
 
 function removeDuplicates(nums: number[]): number {
@@ -115,4 +115,24 @@ function removeDuplicates(nums: number[]): number {
 	return count;
 }
 
-console.log(removeDuplicates([1, 1, 1, 2, 2, 3]));
+// console.log(removeDuplicates([1, 1, 1, 2, 2, 3]));
+
+function productExceptSelf(nums: number[]): number[] {
+	let res = Array(nums.length).fill(1);
+
+	let prod = 1;
+	for (let i = 0; i < nums.length; i++) {
+		res[i] *= prod;
+		prod *= nums[i];
+	}
+
+	prod = 1;
+	for (let j = nums.length - 1; j >= 0; j--) {
+		res[j] *= prod;
+		prod *= nums[j];
+	}
+
+	return res;
+}
+
+console.log(productExceptSelf([1, 2, 3, 4]));
