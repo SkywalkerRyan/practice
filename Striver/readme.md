@@ -4,27 +4,29 @@ https://algomap.io/roadmap
 
 ## S 3.1 Easy
 
-    S 3.1.9 Find the Union, Try using two pointer
-    S 3.1.12 Longest subarray with given sum K(positives), Try using two pointer
+    3.1.9 Find the Union, Try using two pointer
+    3.1.12 Longest subarray with given sum K(positives), Try using two pointer
 
 ## S 3.2 Medium
 
-    S 3.2.2 Sort an array of 0's 1's and 2's, Try using Dutch National Flag algo
-    S 3.2.3 Majority Element (>n/2 times), Try using boyer moore's voting algorithm
-    S 3.2.8 Next Permutation,
-    S 3.2.10 Longest Consecutive Sequence in an Array, Try using set
-    S 3.2.14 Subarray Sum Equals K, Try without brute force
+    3.2.2 Sort an array of 0's 1's and 2's, Try using Dutch National Flag algo
+    3.2.3 Majority Element (>n/2 times), Try using boyer moore's voting algorithm
+    3.2.8 Next Permutation,
+    3.2.10 Longest Consecutive Sequence in an Array, Try using set
+    3.2.14 Subarray Sum Equals K, Try without brute force
 
 ## S 3.3 Hard
 
-    S Majority Element (n/3 times) Try using Bayer Moore's algorithm
-    S Largest subarray with 0 sum, need to understand properly
-    S Count number of subarrays with given xor K, comeback after bit manipulation basics
-    S Merge two sorted arrays without extra space, Try using two pointers
-    S Count Inversions, Return after sorting
-    S Reverse pair, Return after sorting
+    Majority Element (n/3 times) Try using Bayer Moore's algorithm
+    Largest subarray with 0 sum, need to understand properly
+    Count number of subarrays with given xor K, comeback after bit manipulation basics
+    3.3 Merge two sorted arrays without extra space, Try using two pointers
+    Count Inversions, Return after sorting
+    Reverse pair, Return after sorting
 
 ## AM 1
+
+    1.10 Merge two sorted arrays without extra space, Try using two pointers
 
 # Strings
 
@@ -32,11 +34,11 @@ https://algomap.io/roadmap
 
 ## S 5.2 Medium
 
-    S 5.2.7 Sum of Beauty of all substring, How is this working?
+    5.2.7 Sum of Beauty of all substring, How is this working?
 
 ## AM 1
 
-    AM 1.9 Remove element
+    1.9 Remove element
 
 # Hash Tables
 
