@@ -72,18 +72,12 @@ function isValidSudoku(board: string[][]): boolean {
 			let val = board[i][j];
 			let boxIndex = Math.floor(i / 3) * 3 + Math.floor(j / 3);
 
-			console.log('ij : ', i, j);
-			console.log('boxIndex : ', boxIndex);
-			console.log('ij : ', board[i][j]);
 			if (rows[i].has(val) || cols[j].has(val) || boxes[boxIndex].has(val)) {
 				return false;
 			}
 			rows[i].add(val);
 			cols[j].add(val);
 			boxes[boxIndex].add(val);
-			console.log('rows : ', rows);
-			console.log('cols : ', cols);
-			console.log('boxes : ', boxes);
 		}
 	}
 
@@ -116,3 +110,20 @@ function isValidSudoku(board: string[][]): boolean {
 // 		['.', '.', '4', '.', '.', '.', '.', '.', '.'],
 // 	])
 // );
+
+function groupAnagrams(strs: string[]): string[][] {
+	let map = new Map();
+
+	for (let i = 0; i < strs.length; i++) {
+		let key = strs[i].split('').sort().join('');
+		if (!map.has(key)) map.set(key, []);
+		map.get(key).push(i);
+	}
+
+	const values = [...map.values()];
+	const result = values.map((ind) => ind.map((i) => strs[i]));
+
+	return result;
+}
+
+console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
