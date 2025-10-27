@@ -21,3 +21,17 @@ function sortedSquares(nums: number[]): number[] {
 }
 
 console.log(sortedSquares([-4, -1, 0, 3, 10]));
+
+function reverseString(s: string[]): void {
+	let left = 0;
+	let right = s.length - 1;
+
+	while (left < right) {
+		let temp = s[left];
+		s[left] = s[right];
+		s[right] = temp;
+
+		left++;
+		right--;
+	}
+}
