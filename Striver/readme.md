@@ -1,5 +1,15 @@
 https://algomap.io/roadmap
 
+| Abbreviation | Full Name          |
+| ------------ | ------------------ |
+| Arr          | Array              |
+| Twp          | Two Pointer        |
+| Hss          | Hash Set           |
+| Hsm          | Hash Map           |
+| Str          | Strings            |
+| Lls          | Linked List        |
+| Lld          | Doubly Linked List |
+
 # Arrays
 
 ## S 3.1 Easy
@@ -12,7 +22,7 @@ https://algomap.io/roadmap
     3.2.2 Sort an array of 0's 1's and 2's, Try using Dutch National Flag algo
     3.2.3 Majority Element (>n/2 times), Try using boyer moore's voting algorithm
     3.2.8 Next Permutation,
-    3.2.10 Longest Consecutive Sequence in an Array, Try using set
+    3.2.10 0128 Longest Consecutive Sequence in an Array, Try using set
     3.2.14 Subarray Sum Equals K, Try without brute force
 
 ## S 3.3 Hard
@@ -43,6 +53,10 @@ https://algomap.io/roadmap
 
 # Hash Tables
 
+## AM 2
+
+    2.10 0128 Longest Consecutive Sequence in an Array, Try using set
+
 # Two pointers/ Sliding Window
 
 # Stacks & Queues
@@ -51,12 +65,12 @@ https://algomap.io/roadmap
 
 ## S 6.3 Medium LL
 
-    S 6.3.3 Reverse a LL [Recursive], Come back after recursion
-    S 6.3.7 Check if LL is palindrome or not, Try by reversing the list
-    S 6.3.8 Segrregate odd and even nodes in LL, how?!
-    S 6.3.9 Remove Nth Node From End of List, how?!
-    S 6.3.11 Sort List, return after sorting basic
-    S 6.3.12 Sort a LL of 0's 1's and 2's by changing links, return after sorting basic
+    6.3.3 Reverse a LL [Recursive], Come back after recursion
+    6.3.7 Check if LL is palindrome or not, Try by reversing the list
+    6.3.8 Segrregate odd and even nodes in LL, how?!
+    6.3.9 Remove Nth Node From End of List, how?!
+    6.3.11 Sort List, return after sorting basic
+    6.3.12 Sort a LL of 0's 1's and 2's by changing links, return after sorting basic
 
 ## S 6.4 Medium DLL
 

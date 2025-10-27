@@ -64,4 +64,4 @@
 
 # Sunday 20251026
 
-## AlgoMap Array 1.11, Hash 2.1 -
+## AlgoMap Array 1.11, Hash 2.1 - 2.10
