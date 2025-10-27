@@ -24,6 +24,7 @@
 ## Striver 5.1.2 - 5.2.8
 
     D 20251018
+    W 20251026
 
 # Saturday 20251018
 
@@ -55,6 +56,12 @@
 
 ## AlgoMap Array 1.1 - 1.19
 
+    D 20251026
+
+# Friday 20251024
+
+# Saturday 20251025
+
 # Sunday 20251026
 
-## AlgoMap Hash 2.1 -
+## AlgoMap Array 1.11, Hash 2.1 -
