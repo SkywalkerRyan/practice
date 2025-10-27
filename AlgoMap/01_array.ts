@@ -70,6 +70,17 @@ function summaryRanges1(nums: number[]): string[] {
 	return res;
 }
 
+function maxProfit(nums: number[]): number {
+	let profit = 0;
+
+	for (let i = 1; i < nums.length; i++) {
+		if (nums[i] > nums[i - 1]) profit += nums[i] - nums[i - 1];
+	}
+	return profit;
+}
+
+// console.log(maxProfit([7, 1, 5, 3, 6, 4]));
+
 function removeElement(nums: number[], val: number): number {
 	let j = 0;
 	let i = 0;
@@ -160,4 +171,4 @@ function convert(s: string, numRows: number): string {
 	return res;
 }
 
-console.log(convert('PAYPALISHIRING', 3));
+// console.log(convert('PAYPALISHIRING', 3));

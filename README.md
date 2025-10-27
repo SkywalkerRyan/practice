@@ -53,4 +53,8 @@
 
 # Thursday 20251023
 
-## AlgoMap Array 1
+## AlgoMap Array 1.1 - 1.19
+
+# Sunday 20251026
+
+## AlgoMap Hash 2.1 -
