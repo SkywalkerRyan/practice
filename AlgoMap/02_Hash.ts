@@ -15,7 +15,7 @@ function numJewelsInStones(jewels: string, stones: string): number {
 
 console.log(numJewelsInStones('aA', 'aAAbbbb'));
 
-function containsDuplicate(nums: number[]): boolean {
+function containsDuplicate1(nums: number[]): boolean {
 	let map = new Map();
 
 	for (let i = 0; i < nums.length; i++) {
@@ -25,4 +25,19 @@ function containsDuplicate(nums: number[]): boolean {
 	}
 
 	return false;
+}
+
+function canConstruct(ransomNote: string, magazine: string): boolean {
+	let map = new Map();
+
+	for (let char of magazine) {
+		map.set(char, (map.get(char) || 0) + 1);
+	}
+
+	for (let char of ransomNote) {
+		if (map.get(char) > 0) map.set(char, map.get(char) - 1);
+		else return false;
+	}
+
+	return true;
 }
