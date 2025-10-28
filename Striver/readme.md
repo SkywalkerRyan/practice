@@ -59,6 +59,10 @@ https://algomap.io/roadmap
 
 # Two pointers/ Sliding Window
 
+## AM 3
+
+    3.7 3Sum Closest
+
 # Stacks & Queues
 
 # Linked List

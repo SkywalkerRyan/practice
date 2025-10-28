@@ -66,6 +66,7 @@ function isPalindrome(s: string): boolean {
 	return result;
 }
 
+// Didn't work
 // function maxArea(height: number[]): number {
 // 	let num1 = 0;
 // 	let num2 = 0;
@@ -103,29 +104,23 @@ function maxArea(height: number[]): number {
 
 function threeSumClosest(nums: number[], target: number): number {
 	nums = nums.sort((a, b) => a - b);
-	let res = 0;
+	let res = Infinity;
 
 	for (let i = 0; i < nums.length; i++) {
 		if (i > 0 && nums[i] === nums[i - 1]) continue;
 
 		let j = i + 1;
 		let k = nums.length - 1;
-		while (j < k) {
-			console.log('while');
 
+		while (j < k) {
 			let sum = nums[i] + nums[j] + nums[k];
 			let temp = Math.abs(target - sum);
-			res = Math.min(Math.abs(res - target), temp);
 
-			if (sum > 0) k--;
-			else if (sum < 0) j++;
-			else {
-				while (j < k && nums[j] === nums[j + 1]) j++;
-				while (j < k && nums[k] === nums[k - 1]) k--;
+			if (Math.abs(target - res) > temp) res = sum;
 
-				j++;
-				k--;
-			}
+			if (sum > target) k--;
+			else if (sum < target) j++;
+			else return target;
 		}
 	}
 
@@ -133,4 +128,4 @@ function threeSumClosest(nums: number[], target: number): number {
 }
 
 // console.log(threeSumClosest([-1, 2, 1, -4], 1));
-console.log(threeSumClosest([0, 0, 0], 0));
+console.log(threeSumClosest([0, 0, 0], 1));
