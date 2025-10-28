@@ -98,7 +98,7 @@ function maxArea(height: number[]): number {
 	return result;
 }
 
-console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
+// console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
 // console.log(maxArea([1, 1]));
 
 function threeSumClosest(nums: number[], target: number): number {
@@ -111,9 +111,11 @@ function threeSumClosest(nums: number[], target: number): number {
 		let j = i + 1;
 		let k = nums.length - 1;
 		while (j < k) {
+			console.log('while');
+
 			let sum = nums[i] + nums[j] + nums[k];
 			let temp = Math.abs(target - sum);
-			res = Math.min(res, temp);
+			res = Math.min(Math.abs(res - target), temp);
 
 			if (sum > 0) k--;
 			else if (sum < 0) j++;
@@ -129,3 +131,6 @@ function threeSumClosest(nums: number[], target: number): number {
 
 	return res;
 }
+
+// console.log(threeSumClosest([-1, 2, 1, -4], 1));
+console.log(threeSumClosest([0, 0, 0], 0));

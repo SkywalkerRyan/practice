@@ -31,6 +31,7 @@
 ## Striver 6.1.1 - 6.2.3
 
     D 20251019
+    W 20251027
 
 # Sunday 20251019
 
@@ -64,4 +65,10 @@
 
 # Sunday 20251026
 
-## AlgoMap Array 1.11, Hash 2.1 - 2.10
+## AlgoMap Array 1.11, Hash 2.1 - 2.10, Twp 3.1 - 3.6
+
+    D 20251027
+
+# Monday 20251027
+
+## AlgoMap Twp 3.7 -
