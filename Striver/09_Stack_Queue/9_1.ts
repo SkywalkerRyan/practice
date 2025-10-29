@@ -210,4 +210,41 @@ const ParMap = new Map([
 	[']', '['],
 ]);
 
-console.log(isValid('()'));
+// console.log(isValid('()'));
+
+class MinStack {
+	vals: number[];
+	mins: number[];
+	length: number;
+
+	constructor() {
+		this.vals = [];
+		this.mins = [];
+		this.length = 0;
+	}
+
+	push(val: number) {
+		this.vals[this.length] = val;
+		if (this.length === 0) this.mins[this.length] = val;
+		else this.mins[this.length] = Math.min(this.mins[this.length - 1], val);
+
+		this.length++;
+	}
+
+	pop() {
+		if (this.length === 0) return undefined;
+		this.length--;
+	}
+
+	top() {
+		return this.vals[this.length - 1];
+	}
+
+	size() {
+		return this.length;
+	}
+
+	getMin(): number {
+		return this.mins[this.length - 1];
+	}
+}
