@@ -9,6 +9,8 @@ https://algomap.io/roadmap
 | Str          | Strings            |
 | Lls          | Linked List        |
 | Lld          | Doubly Linked List |
+| Stk          | Stacks             |
+| Que          | Queue              |
 
 # Arrays
 
