@@ -61,7 +61,8 @@ https://algomap.io/roadmap
 
 ## AM 3
 
-    3.7 3Sum Closest
+    3.7 0016 3Sum Closest
+    3.9 0042 Trapping rain water, How the f?!
 
 # Stacks & Queues
 
