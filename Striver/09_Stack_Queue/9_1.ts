@@ -128,9 +128,63 @@ class StacksL {
 	}
 }
 
-let stack = new StacksL();
+// let stack = new StacksL();
 
-stack.push(6);
-console.log(stack.top());
-console.log(stack.size());
-console.log(stack.pop());
+// stack.push(6);
+// console.log(stack.top());
+// console.log(stack.size());
+// console.log(stack.pop());
+
+class QueueL {
+	head: Node | null;
+	length: number;
+
+	constructor() {
+		this.head = null;
+		this.length = 0;
+	}
+
+	push(val): void {
+		let temp = new Node(val);
+		this.length++;
+
+		if (this.length === 1) {
+			this.head = temp;
+			return;
+		}
+
+		let curr = this.head;
+		while (curr.next) {
+			curr = curr.next;
+		}
+		curr.next = temp;
+	}
+
+	pop(): Node {
+		let temp = this.head;
+		this.length--;
+
+		this.head = this.head.next;
+
+		return temp;
+	}
+
+	top(): Node {
+		return this.head;
+	}
+
+	isEmpty(): boolean {
+		return this.length === 0;
+	}
+
+	size(): number {
+		return this.length;
+	}
+}
+
+let queue = new QueueL();
+
+queue.push(5);
+console.log(queue.top());
+console.log(queue.size());
+console.log(queue.pop());
