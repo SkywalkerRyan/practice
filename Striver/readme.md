@@ -11,6 +11,7 @@ https://algomap.io/roadmap
 | Lld          | Doubly Linked List |
 | Stk          | Stacks             |
 | Que          | Queue              |
+| Msk          | Monotonic Stack    |
 
 # Arrays
 
@@ -67,6 +68,10 @@ https://algomap.io/roadmap
     3.9 0042 Trapping rain water, How the f?!
 
 # Stacks & Queues
+
+## S 9.2 Prefix, Infix, Postfix
+
+    Come back later. Skipping for now.
 
 # Linked List
 
