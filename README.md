@@ -52,6 +52,7 @@
 ## Striver 6.3.8 - 6.3.10, 6.3.13 - 6.3.15
 
     D 20251022
+    W 20251030
 
 # Wednesday 20251022
 
@@ -83,6 +84,12 @@
 
     D 20251029
 
-## Striver StkQue 9.1.1
+## Striver StkQue 9.1.1 - 9.1.8
+
+    D 20251030
 
 # Wednesday 20251029
+
+## Striver StkQue 9.3.1
+
+    D 20251030
