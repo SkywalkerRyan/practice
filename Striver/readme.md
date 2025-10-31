@@ -11,7 +11,7 @@ https://algomap.io/roadmap
 | Lld          | Doubly Linked List |
 | Stk          | Stacks             |
 | Que          | Queue              |
-| Msk          | Monotonic Stack    |
+| Mst          | Monotonic Stack    |
 
 # Arrays
 
