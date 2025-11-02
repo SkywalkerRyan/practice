@@ -73,6 +73,10 @@ https://algomap.io/roadmap
 
     Come back later. Skipping for now.
 
+## S 9.3
+
+    9.3.6 0907 Sum of subarray minimum, come back after dynamic programming
+
 # Linked List
 
 ## S 6.3 Medium LL
@@ -113,5 +117,7 @@ https://algomap.io/roadmap
 # Greedy
 
 # Dynamic Programming
+
+    S After basic return to "Sum of subarray minimum" in 9.3.6
 
 # Graphs/Union Finds
