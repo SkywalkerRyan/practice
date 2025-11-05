@@ -54,8 +54,6 @@
     D 20251022
     W 20251030
 
-# Wednesday 20251022
-
 # Thursday 20251023
 
 ## AlgoMap Array 1.1 - 1.19
@@ -93,3 +91,7 @@
 # Saturday 20251101
 
 ## LC 3217, 3289
+
+# Tuesday 20251104
+
+## Striver 9.3.6

@@ -75,7 +75,9 @@ https://algomap.io/roadmap
 
 ## S 9.3
 
+    9.3.4 0042 Trapping rainwater, How?!
     9.3.6 0907 Sum of subarray minimum, come back after dynamic programming
+    9.3.7 0735 Asteroid Collision, How?!
 
 # Linked List
 
