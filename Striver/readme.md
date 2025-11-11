@@ -12,6 +12,7 @@ https://algomap.io/roadmap
 | Stk          | Stacks             |
 | Que          | Queue              |
 | Mst          | Monotonic Stack    |
+| Prs          | Prefix Sum         |
 
 # Arrays
 
@@ -61,6 +62,10 @@ https://algomap.io/roadmap
     2.10 0128 Longest Consecutive Sequence in an Array, Try using set
 
 # Two pointers/ Sliding Window
+
+## S 10.1 Medium Problems
+
+    10.1.5 Binary subarray with sum, No idea how to solve.
 
 ## AM 3
 
