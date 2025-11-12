@@ -91,3 +91,51 @@ function atMost2(nums: number[], k: number): number {
 
 	return res;
 }
+
+function numberOfSubstrings(s: string): number {
+	let res = 0;
+	let map = new Map([
+		['a', -1],
+		['b', -1],
+		['c', -1],
+	]);
+
+	for (let i = 0; i < s.length; i++) {
+		map.set(s[i], i);
+		let min = Math.min(...map.values());
+
+		if (min < 0) continue;
+		res += min + 1;
+	}
+
+	return res;
+}
+
+// console.log(numberOfSubstrings('abcabc'));
+// console.log(numberOfSubstrings('aaacb'));
+// console.log(numberOfSubstrings('abc'));
+
+function maxScore(cardPoints: number[], k: number): number {
+	let lSum = 0;
+	let rSum = 0;
+
+	for (let i = 0; i < k; i++) {
+		lSum += cardPoints[i];
+	}
+
+	let len = cardPoints.length;
+	let res = lSum;
+
+	for (let i = 1; i <= k; i++) {
+		lSum -= cardPoints[k - i];
+		rSum += cardPoints[len - i];
+		res = Math.max(res, lSum + rSum);
+	}
+
+	return res;
+}
+
+// console.log(maxScore([1, 2, 3, 4, 5, 6, 1], 3));
+// console.log(maxScore([2, 2, 2], 2));
+// console.log(maxScore([9, 7, 7, 9, 7, 7, 9], 7));
+// console.log(maxScore([100, 40, 17, 9, 73, 75], 3));

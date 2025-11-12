@@ -4,6 +4,7 @@ https://algomap.io/roadmap
 | ------------ | ------------------ |
 | Arr          | Array              |
 | Twp          | Two Pointer        |
+| Slw          | Sliding Window     |
 | Hss          | Hash Set           |
 | Hsm          | Hash Map           |
 | Str          | Strings            |
