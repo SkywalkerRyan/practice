@@ -73,16 +73,19 @@
 ## AlgoMap Twp 3.7 - 3.8
 
     D 20251028
+    W 20251111
 
 # Tuesday 20251028
 
 ## AlgoMap Twp 3.9
 
     D 20251029
+    W 20251111
 
 ## Striver StkQue 9.1.1 - 9.1.8
 
     D 20251030
+    W 20251111
 
 # Wednesday 20251029
 
@@ -112,6 +115,8 @@
 
 ## Striver 10.1.1 - 10.1.4
 
+    D 20251111
+
 # Tuesday 20241111
 
-## Striver 10.1.5
+## Striver 10.1.5 - 10.1.8

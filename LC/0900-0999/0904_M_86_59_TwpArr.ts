@@ -1,4 +1,4 @@
-function totalFruits(fruits: number[]) {
+function totalFruit(fruits: number[]): number {
 	let left = 0;
 	let right = 0;
 
