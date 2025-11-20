@@ -1,5 +1,4 @@
 // 2807
-
 function insertGreatestCommonDivisors(head: ListNode | null): ListNode | null {
 	if (!head || !head.next) return head;
 
@@ -29,4 +28,35 @@ function findGCD(big: number, small: number): number {
 	return Math.abs(big);
 }
 
-console.log(findGCD(6, 10));
+// console.log(findGCD(6, 10));
+
+// 0138
+function copyRandomList(head: _Node | null): _Node | null {
+	let dummy = new _Node(0, null, null);
+	let map = new Map();
+
+	let curr = head;
+	let _curr = dummy;
+
+	while (curr) {
+		let temp = new _Node(curr.val, null, null);
+		_curr.next = temp;
+
+		map.set(curr, temp);
+
+		curr = curr.next;
+		_curr = _curr.next;
+	}
+
+	curr = head;
+	_curr = dummy.next;
+
+	while (curr) {
+		_curr.random = map.get(curr.random) || null;
+
+		curr = curr.next;
+		_curr = _curr.next;
+	}
+
+	return dummy.next;
+}

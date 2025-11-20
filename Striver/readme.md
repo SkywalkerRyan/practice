@@ -1,19 +1,20 @@
 https://algomap.io/roadmap
 
-| Abbreviation | Full Name          |
-| ------------ | ------------------ |
-| Arr          | Array              |
-| Twp          | Two Pointer        |
-| Slw          | Sliding Window     |
-| Hss          | Hash Set           |
-| Hsm          | Hash Map           |
-| Str          | Strings            |
-| Lls          | Linked List        |
-| Lld          | Doubly Linked List |
-| Stk          | Stacks             |
-| Que          | Queue              |
-| Mst          | Monotonic Stack    |
-| Prs          | Prefix Sum         |
+| Abbreviation | Full Name             |
+| ------------ | --------------------- |
+| Arr          | Array                 |
+| Twp          | Two Pointer           |
+| Sfp          | Slow and Fast Pointer |
+| Slw          | Sliding Window        |
+| Hss          | Hash Set              |
+| Hsm          | Hash Map              |
+| Str          | Strings               |
+| Lls          | Linked List           |
+| Lld          | Doubly Linked List    |
+| Stk          | Stacks                |
+| Que          | Queue                 |
+| Mst          | Monotonic Stack       |
+| Prs          | Prefix Sum            |
 
 # Arrays
 

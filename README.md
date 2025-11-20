@@ -136,4 +136,4 @@
 
 # Thursday 20251120
 
-## AlgoMap Stk 4.2 - 4.6
+## AlgoMap Stk 4.2 - 4.6, Lls 5.1 -
