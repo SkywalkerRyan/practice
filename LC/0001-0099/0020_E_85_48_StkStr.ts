@@ -1,4 +1,4 @@
-// Striver 9.1.7,AlgoMap Stk 04.2
+// Striver 9.1.7, AlgoMap Stk 04.2
 
 function isValid(s: string): boolean {
 	let stack = [];

@@ -1,17 +1,15 @@
+// Striver ??, AlgoMap Lls 05.1
+
 /**
  * @param {ListNode} head
  * @return {ListNode}
  */
-var deleteDuplicates = function (head)
-{
+var deleteDuplicates = function (head) {
 	let current = head;
 
-	while (current?.next)
-	{
-		if (current.val === current.next.val)
-			current.next = current.next.next
-		else
-			current = current.next
+	while (current?.next) {
+		if (current.val === current.next.val) current.next = current.next.next;
+		else current = current.next;
 	}
 
 	return head;
