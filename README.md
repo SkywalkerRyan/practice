@@ -132,4 +132,4 @@
 
 # Wednesday 20251119
 
-## AlgoMap Slw 7.1
+## AlgoMap Slw 7.1 - 7.6

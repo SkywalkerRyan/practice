@@ -87,3 +87,61 @@ function minSubArrayLen(target: number, nums: number[]): number {
 // console.log(minSubArrayLen(4, [1, 4, 4]));
 // console.log(minSubArrayLen(11, [1, 1, 1, 1, 1, 1, 1, 1]));
 // console.log(minSubArrayLen(11, [1, 2, 3, 4, 5])); // 3
+
+// 0567
+// function checkInclusion(s1: string, s2: string): boolean {
+// 	let map = new Map();
+
+// 	for (let i = 0; i < s1.length; i++) {
+// 		map.set(s1[i], (map.get(s1[i]) || 0) + 1);
+// 	}
+
+// 	let left = 0;
+
+// 	for (let right = s1.length - 1; right < s2.length; right++) {
+// 		let _map = new Map(map);
+
+// 		for (let i = left; i <= right; i++) {
+// 			let val = _map.get(s2[i]);
+// 			if (val === 1) _map.delete(s2[i]);
+// 			else _map.set(s2[i], val - 1);
+// 		}
+
+// 		if (_map.size === 0) return true;
+// 		left++;
+// 	}
+
+// 	return false;
+// }
+
+// 0567
+function checkInclusion(s1: string, s2: string): boolean {
+	if (s1.length > s2.length) return false;
+
+	let need = new Array(26).fill(0);
+	let have = new Array(26).fill(0);
+
+	for (const char of s1) need[char.charCodeAt(0) - 97]++;
+
+	let left = 0;
+	for (let right = 0; right < s2.length; right++) {
+		have[s2.charCodeAt(right) - 97]++;
+
+		if (right - left + 1 > s1.length) {
+			have[s2.charCodeAt(left) - 97]--;
+			left++;
+		}
+
+		if (isArrayEqual(need, have)) return true;
+	}
+
+	return false;
+}
+
+function isArrayEqual(a: number[], b: number[]): boolean {
+	for (let i = 0; i < 26; i++) if (a[i] !== b[i]) return false;
+	return true;
+}
+
+// console.log(checkInclusion('ab', 'eidbaooo'));
+// console.log(checkInclusion('ab', 'eidboaooo'));
