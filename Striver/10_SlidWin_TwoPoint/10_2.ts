@@ -48,3 +48,17 @@ function atMost(nums: number[], k: number): number {
 
 	return res;
 }
+
+function minWindow(s: string, t: string): string {
+	let res = '';
+
+	let map = new Map();
+	for (let char of s) {
+		map.set(char, (map.get(char) || 0) + 1);
+	}
+
+	let left = 0;
+	let cnt = 0;
+
+	return res;
+}

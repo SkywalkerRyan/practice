@@ -124,3 +124,7 @@
 # Wednesday 20251112
 
 ## Striver 10.2.2
+
+# Wednesday 20251119
+
+## AlgoMap Slw 7.1
