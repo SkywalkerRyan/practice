@@ -1,3 +1,5 @@
+// Striver 9.3.10,AlgoMap Stk 04.6
+
 function largestRectangleArea(heights: number[]): number {
 	let res = 0;
 
