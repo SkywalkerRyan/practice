@@ -1,3 +1,5 @@
+// Striver 10.2.1
+
 function kDistinctChar(s: string, k: number) {
 	let res = 0;
 

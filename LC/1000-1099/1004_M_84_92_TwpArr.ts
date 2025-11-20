@@ -1,3 +1,5 @@
+// Striver 10.1.2, AlgoMap Slw 07.2
+
 function longestOnes(nums: number[], k: number): number {
 	let left = 0;
 	let right = 0;

@@ -1,4 +1,4 @@
-// Striver 10.1.1
+// Striver 10.1.1, AlgoMap Slw 07.3
 
 function lengthOfLongestSubstring(s: string): number {
 	let j = 0;
