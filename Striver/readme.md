@@ -74,6 +74,8 @@ https://algomap.io/roadmap
     3.7 0016 3Sum Closest
     3.9 0042 Trapping rain water, How the f?!
 
+## AM 7
+
 # Stacks & Queues
 
 ## S 9.2 Prefix, Infix, Postfix
@@ -85,6 +87,8 @@ https://algomap.io/roadmap
     9.3.4 0042 Trapping rainwater, How?!
     9.3.6 0907 Sum of subarray minimum, come back after dynamic programming
     9.3.7 0735 Asteroid Collision, How?!
+
+## AM 4
 
 # Linked List
 

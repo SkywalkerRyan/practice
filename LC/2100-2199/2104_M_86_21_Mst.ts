@@ -1,3 +1,5 @@
+// Striver 9.3.8
+
 function subArrayRanges(nums: number[]): number {
 	let res = 0;
 

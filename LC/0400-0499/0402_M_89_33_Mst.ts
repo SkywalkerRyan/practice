@@ -1,3 +1,5 @@
+// Striver 9.3.9
+
 function removeKdigits(num: string, k: number): string {
 	if (num.length <= k) return '0';
 

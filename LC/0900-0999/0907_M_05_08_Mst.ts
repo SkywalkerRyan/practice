@@ -1,3 +1,5 @@
+// Striver 9.3.6
+
 function sumSubarrayMins(arr: number[]): number {
 	let res = 0;
 
