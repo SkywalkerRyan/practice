@@ -35,4 +35,27 @@ function lowerBound(nums: number[], target: number) {
 }
 
 // console.log(lowerBound([1, 2, 2, 3], 2));
-console.log(lowerBound([3, 5, 8, 15, 19], 9));
+// console.log(lowerBound([3, 5, 8, 15, 19], 9));
+
+function upperBound(nums: number[], target: number) {
+	let left = 0;
+	let len = nums.length;
+	let right = len - 1;
+	let res = len;
+
+	while (left <= right) {
+		let mid = Math.floor((left + right) / 2);
+
+		if (nums[mid] > target) {
+			res = mid;
+			right = mid - 1;
+		} else {
+			left = mid + 1;
+		}
+	}
+
+	return res;
+}
+
+// console.log(upperBound([1, 2, 2, 3], 2));
+console.log(upperBound([3, 5, 8, 9, 15, 19], 9));
