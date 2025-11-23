@@ -15,6 +15,7 @@ https://algomap.io/roadmap
 | Que          | Queue                 |
 | Mst          | Monotonic Stack       |
 | Prs          | Prefix Sum            |
+| Bis          | Binary Search         |
 
 # Arrays
 
@@ -104,6 +105,8 @@ https://algomap.io/roadmap
 ## S 6.4 Medium DLL
 
 ## S 6.5 Hard LL
+
+## AM 5
 
 # Binary Search
 
