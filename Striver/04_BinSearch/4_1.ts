@@ -85,4 +85,26 @@ function searchInsert(nums: number[], target: number): number {
 // console.log(searchInsert([1, 3, 5, 6], 2));
 // console.log(searchInsert([1, 3, 5, 6], 7));
 // console.log(searchInsert([2, 3, 5, 6], 1));
-console.log(searchInsert([2], 1));
+// console.log(searchInsert([2], 1));
+
+function getFloorAndCeil(nums: number[], target: number): number[] {
+	let len = nums.length;
+	let left = 0;
+	let right = len - 1;
+	let res = len;
+
+	while (left <= right) {
+		let mid = Math.floor((left + right) / 2);
+
+		if (nums[mid] === target) return [nums[mid], nums[mid]];
+		else if (nums[mid] > target) {
+			res = mid;
+			right = mid - 1;
+		} else {
+			left = mid + 1;
+		}
+	}
+
+	return [nums[res], nums[res + 1]];
+}
+// console.log(getFloorAndCeil([3, 4, 4, 7, 8, 10], 5));
