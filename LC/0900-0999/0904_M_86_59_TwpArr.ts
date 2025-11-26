@@ -1,3 +1,4 @@
+// Striver 10.1.3
 function totalFruit(fruits: number[]): number {
 	let left = 0;
 	let right = 0;
