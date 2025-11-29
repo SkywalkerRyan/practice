@@ -171,4 +171,62 @@ function search(nums: number[], target: number): number {
 
 	return -1;
 }
-console.log(search([4, 5, 6, 7, 0, 1, 2], 0));
+// console.log(search([4, 5, 6, 7, 0, 1, 2], 0));
+
+// 0081
+function search2(nums: number[], target: number): boolean {
+	let left = 0;
+	let right = nums.length - 1;
+
+	while (left <= right) {
+		let mid = Math.floor((left + right) / 2);
+
+		if (nums[mid] === target) return true;
+
+		if (nums[left] === nums[mid] && nums[mid] === nums[right]) {
+			left++;
+			right--;
+			continue;
+		}
+
+		if (nums[mid] >= nums[left]) {
+			if (nums[left] <= target && nums[mid] > target) {
+				right = mid - 1;
+			} else {
+				left = mid + 1;
+			}
+		} else {
+			if (nums[right] >= target && nums[mid] < target) {
+				left = mid + 1;
+			} else right = mid - 1;
+		}
+	}
+
+	return false;
+}
+// console.log(search2([4, 5, 6, 7, 0, 1, 2], 0));
+
+// 0153
+function findMin(nums: number[]): number {
+	let left = 0;
+	let right = nums.length - 1;
+
+	let res = Infinity;
+
+	while (left <= right) {
+		let mid = Math.floor((left + right) / 2);
+
+		res = Math.min(res, nums[mid]);
+
+		if (nums[mid] > nums[right]) {
+			left = mid + 1;
+		} else {
+			right = mid - 1;
+		}
+	}
+
+	return res;
+}
+// console.log(findMin([3, 4, 5, 1, 2]));
+// console.log(findMin([4, 5, 6, 7, 0, 1, 2]));
+console.log(findMin([11, 13, 15, 17]));

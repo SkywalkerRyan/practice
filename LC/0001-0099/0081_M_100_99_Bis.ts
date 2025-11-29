@@ -1,12 +1,12 @@
-// 0081
-function search(nums: number[], target: number): number {
+// Striver 4.1.9
+function search(nums: number[], target: number): boolean {
 	let left = 0;
 	let right = nums.length - 1;
 
 	while (left <= right) {
 		let mid = Math.floor((left + right) / 2);
 
-		if (nums[mid] === target) return mid;
+		if (nums[mid] === target) return true;
 
 		if (nums[left] === nums[mid] && nums[mid] === nums[right]) {
 			left++;
@@ -27,6 +27,6 @@ function search(nums: number[], target: number): number {
 		}
 	}
 
-	return -1;
+	return false;
 }
 // console.log(search([4, 5, 6, 7, 0, 1, 2], 0));
