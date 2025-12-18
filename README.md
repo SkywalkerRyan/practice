@@ -1,175 +1,179 @@
 # Tuesday 20251014
 
-## Striver 3.1.1 - 3.2.2
+#### Striver 3.1.1 - 3.2.2
 
     D 20251015
     W 20251021
 
 # Wednesday 20251015
 
-## Striver 3.2.3 - 3.2.13
+#### Striver 3.2.3 - 3.2.13
 
     D 20251016
     W 20251022
 
 # Thursday 20251016
 
-## Striver 3.2.14 - 3.3.12, 5.1.1
+#### Striver 3.2.14 - 3.3.12, 5.1.1
 
     D 20251017
     W 20251023
 
 # Friday 20251017
 
-## Striver 5.1.2 - 5.2.8
+#### Striver 5.1.2 - 5.2.8
 
     D 20251018
     W 20251026
 
 # Saturday 20251018
 
-## Striver 6.1.1 - 6.2.3
+#### Striver 6.1.1 - 6.2.3
 
     D 20251019
     W 20251027
 
 # Sunday 20251019
 
-## Striver 6.2.4 - 6.3.2, 6.3.4
+#### Striver 6.2.4 - 6.3.2, 6.3.4
 
     D 20251020
     W 20251028
 
 # Monday 20251020
 
-## Striver 6.3.5 - 6.3.7
+#### Striver 6.3.5 - 6.3.7
 
     D 20251021
     W 20251029
 
 # Tuesday 20251021
 
-## Striver 6.3.8 - 6.3.10, 6.3.13 - 6.3.15
+#### Striver 6.3.8 - 6.3.10, 6.3.13 - 6.3.15
 
     D 20251022
     W 20251030
 
 # Thursday 20251023
 
-## AlgoMap Array 1.1 - 1.10, 1.12 - 1.19
+#### AlgoMap Array 1.1 - 1.10, 1.12 - 1.19
 
     D 20251026
     W 20251106
 
 # Sunday 20251026
 
-## AlgoMap Array 1.11, Hash 2.1 - 2.10, Twp 3.1 - 3.6
+#### AlgoMap Array 1.11, Hash 2.1 - 2.10, Twp 3.1 - 3.6
 
     D 20251027
     W 20251109
 
 # Monday 20251027
 
-## AlgoMap Twp 3.7 - 3.8
+#### AlgoMap Twp 3.7 - 3.8
 
     D 20251028
     W 20251111
 
 # Tuesday 20251028
 
-## AlgoMap Twp 3.9
+#### AlgoMap Twp 3.9
 
     D 20251029
     W 20251111
 
-## Striver StkQue 9.1.1 - 9.1.8
+#### Striver StkQue 9.1.1 - 9.1.8
 
     D 20251030
     W 20251111
 
 # Wednesday 20251029
 
-## Striver StkQue 9.3.1 - 9.3.5, 9.3.7
+#### Striver StkQue 9.3.1 - 9.3.5, 9.3.7
 
     D 20251030
     W 20251119
 
 # Saturday 20251101
 
-## LC 3217, 3289
+#### LC 3217, 3289
 
     D 20251106
     W 20251121
 
 # Tuesday 20251104
 
-## Striver 9.3.6, 9.3.8 - 9.3.9
+#### Striver 9.3.6, 9.3.8 - 9.3.9
 
     D 20251106
     W 20251121
 
 # Thursday 20251106
 
-## Striver 9.3.10 - 9.3.11
+#### Striver 9.3.10 - 9.3.11
 
     D 20251109
     W 20251126
 
 # Sunday 20251109
 
-## Striver 10.1.1 - 10.1.4
+#### Striver 10.1.1 - 10.1.4
 
     D 20251111
     W 20251126
 
 # Tuesday 20251111
 
-## Striver 10.1.5 - 10.1.8, 10.2.1(0340)
+#### Striver 10.1.5 - 10.1.8, 10.2.1(0340)
 
     D 20251119
 
 # Wednesday 20251112
 
-## Striver 10.2.2
+#### Striver 10.2.2
 
     D 20251119
 
 # Wednesday 20251119
 
-## AlgoMap Slw 7.1 - 7.6, Stk 4.1
+#### AlgoMap Slw 7.1 - 7.6, Stk 4.1
 
     D 20251121
 
 # Thursday 20251120
 
-## AlgoMap Stk 4.2 - 4.6, Lls 5.1 - 5.8
+#### AlgoMap Stk 4.2 - 4.6, Lls 5.1 - 5.8
 
     D 20251121
 
 # Saturday 20251122
 
-## Striver 4.1.1
+#### Striver 4.1.1
 
     D 20251126
 
 # Sunday 20251123
 
-## Striver 4.1.2 - 4.1.5
+#### Striver 4.1.2 - 4.1.5
 
     D 20251126
 
 # Wednesday 20251126
 
-## Striver 4.1.6 - 4.1.7
+#### Striver 4.1.6 - 4.1.7
 
 # Friday 20251128
 
-## Striver 4.1.8 - 4.1.10
+#### Striver 4.1.8 - 4.1.10
 
 # Friday 20251205
 
-## Striver 4.1.11 - 4.1.12
+#### Striver 4.1.11 - 4.1.12
 
 # Tuesday 20251216
 
-## Striver 4.1.13
+#### Striver 4.1.13, 4.2.1
+
+# Thursday 20251218
+
+#### Striver 4.2.2

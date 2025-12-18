@@ -17,3 +17,26 @@ function floorSqrt(x: number): number {
 	return high;
 }
 // console.log(floorSqrt(8));
+
+function nthRoot(n: number, m: number): number {
+	if (m < 2) return m;
+
+	let lo = 1;
+	let hi = Math.floor(m / 2);
+
+	while (lo <= hi) {
+		let mid = Math.floor((lo + hi) / 2);
+
+		let ans = 1;
+		for (let i = 0; i < n; i++) {
+			ans = ans * mid;
+		}
+
+		if (ans === m) return mid;
+		else if (ans < m) lo = mid + 1;
+		else hi = mid - 1;
+	}
+
+	return -1;
+}
+console.log(nthRoot(4, 69));
