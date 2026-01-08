@@ -115,6 +115,7 @@ https://algomap.io/roadmap
 #### S 4.2 BS on Answers
 
     S 4.2.1 Find square root of a number in log n, How?
+    S 4.2.7 Kth Missing Positive Number
 
 # Recursion/Backtracking
 

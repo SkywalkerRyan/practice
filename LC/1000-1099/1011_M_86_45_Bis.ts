@@ -1,4 +1,4 @@
-// 1011
+// Striver 4.2.6
 function shipWithinDays(weights: number[], days: number): number {
 	let res = 0;
 
