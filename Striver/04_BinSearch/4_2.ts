@@ -257,4 +257,4 @@ function possWithDist(position: number[], mid: number): number {
 }
 
 // console.log(maxDistance([0, 3, 4, 7, 10, 9], 4));
-console.log(maxDistance([5, 4, 3, 2, 1, 1000000000], 2));
+// console.log(maxDistance([5, 4, 3, 2, 1, 1000000000], 2));
