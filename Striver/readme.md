@@ -16,6 +16,7 @@ https://algomap.io/roadmap
 | Mst          | Monotonic Stack       |
 | Prs          | Prefix Sum            |
 | Bis          | Binary Search         |
+| Mat          | Matrix                |
 
 # Arrays
 
@@ -117,6 +118,10 @@ https://algomap.io/roadmap
     S 4.2.1 Find square root of a number in log n, How?
     S 4.2.7 Kth Missing Positive Number
     S 4.2.8 Aggressive Cows
+
+#### S 4.2 BS on 2D Array
+
+    S 4.3.1 Find the row with maximum number of 1's, Improve
 
 # Recursion/Backtracking
 

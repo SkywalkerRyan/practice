@@ -1,39 +1,4 @@
-// Striver 4.3.1
-function rowWithMaxOnes(matrix: number[][]): number {
-	let res = -1;
-	let max = 0;
-	for (let i = 0; i < matrix.length; i++) {
-		let width = matrix[0].length;
-
-		let temp = width - 1;
-		let tempRes = 0;
-		while (matrix[i][temp] > 0) {
-			if (matrix[i][temp] === 1) tempRes++;
-			temp--;
-		}
-		if (tempRes > max) {
-			max = tempRes;
-			res = i;
-		}
-	}
-	return res;
-}
-
-// console.log(
-// 	rowWithMaxOnes([
-// 		[0, 1, 1],
-// 		[1, 1, 1],
-// 		[0, 0, 0],
-// 	])
-// );
-// console.log(
-// 	rowWithMaxOnes([
-// 		[0, 0],
-// 		[0, 0],
-// 	])
-// );
-
-// 0074
+// Striver 4.3.2
 function searchMatrix(matrix: number[][], target: number): boolean {
 	let top = 0;
 	let bot = matrix.length - 1;
