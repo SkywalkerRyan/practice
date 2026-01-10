@@ -34,7 +34,7 @@ function rowWithMaxOnes(matrix: number[][]): number {
 // );
 
 // 0074
-function searchMatrix(matrix: number[][], target: number): boolean {
+function searchMatrix1(matrix: number[][], target: number): boolean {
 	let top = 0;
 	let bot = matrix.length - 1;
 	let row = 0;
@@ -49,7 +49,7 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 	}
 
 	let left = 0;
-	let right = matrix[0].length;
+	let right = matrix[0].length - 1;
 
 	while (left <= right) {
 		let mid = Math.floor((left + right) / 2);
@@ -62,13 +62,44 @@ function searchMatrix(matrix: number[][], target: number): boolean {
 	return false;
 }
 
+// console.log(
+// 	searchMatrix(
+// 		[
+// 			[1, 3, 5, 7],
+// 			[10, 11, 16, 20],
+// 			[23, 30, 34, 60],
+// 		],
+// 		3
+// 	)
+// );
+
+// 0240
+function searchMatrix2(matrix: number[][], target: number): boolean {
+	let m = matrix.length;
+	let n = matrix[0].length;
+
+	let row = 0;
+	let col = n - 1;
+
+	while (row < m && col >= 0) {
+		if (matrix[row][col] === target) return true;
+
+		if (matrix[row][col] > target) col--;
+		else row++;
+	}
+
+	return false;
+}
+
 console.log(
-	searchMatrix(
+	searchMatrix2(
 		[
-			[1, 3, 5, 7],
-			[10, 11, 16, 20],
-			[23, 30, 34, 60],
+			[1, 4, 7, 11, 15],
+			[2, 5, 8, 12, 19],
+			[3, 6, 9, 16, 22],
+			[10, 13, 14, 17, 24],
+			[18, 21, 23, 26, 30],
 		],
-		3
+		5
 	)
 );
