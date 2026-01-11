@@ -123,6 +123,7 @@ https://algomap.io/roadmap
 
     S 4.3.1 Find the row with maximum number of 1's, Improve
     S 4.3.4 Find Peak Element (2D Matrix)
+    S 4.3.5 Find Median
 
 # Recursion/Backtracking
 

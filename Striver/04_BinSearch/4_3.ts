@@ -138,9 +138,67 @@ function findPeakGrid(mat: number[][]): number[] {
 // 	])
 // );
 
+// console.log(
+// 	findPeakGrid([
+// 		[70, 50, 40, 30, 20],
+// 		[100, 1, 2, 3, 4],
+// 	])
+// );
+
+// Striver 4.3.5
+function findMedian(mat: number[][]): number {
+	let m = mat.length;
+	let n = mat[0].length;
+
+	let low = mat[0][0];
+	let high = mat[0][n - 1];
+
+	for (let i = 1; i < m; i++) {
+		low = Math.min(low, mat[i][0]);
+		high = Math.max(high, mat[i][n - 1]);
+	}
+
+	let desired = Math.floor((m * n + 1) / 2);
+
+	while (low < high) {
+		let mid = Math.floor((low + high) / 2);
+		let count = 0;
+
+		for (let i = 0; i < m; i++) {
+			count += countSmallerOrEqual(mat[i], mid);
+		}
+
+		if (count < desired) low = mid + 1;
+		else high = mid;
+	}
+
+	return low;
+}
+
+function countSmallerOrEqual(row: number[], target: number): number {
+	let res = 0;
+
+	let low = 0;
+	let high = row.length - 1;
+
+	while (low <= high) {
+		let mid = Math.floor((low + high) / 2);
+
+		if (row[mid] <= target) {
+			res = mid + 1;
+			low = mid + 1;
+		} else high = mid - 1;
+	}
+
+	return res;
+}
+
 console.log(
-	findPeakGrid([
-		[70, 50, 40, 30, 20],
-		[100, 1, 2, 3, 4],
+	findMedian([
+		[1, 4, 7, 11, 15],
+		[2, 5, 8, 12, 19],
+		[3, 6, 9, 16, 22],
+		[10, 13, 14, 17, 24],
+		[18, 21, 23, 26, 30],
 	])
 );
