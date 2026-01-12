@@ -1,4 +1,4 @@
-// Striver 4.1.4
+// Striver 4.1.4, AlgoMap 6.2
 function searchInsert(nums: number[], target: number): number {
 	let len = nums.length;
 	let left = 0;
