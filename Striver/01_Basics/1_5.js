@@ -25,7 +25,7 @@ function sum2(number, current) {
 
 	return current + sum2(number, current + 1);
 }
-console.log(sum2(8, 1));
+// console.log(sum2(8, 1));
 
 function factorial(n) {
 	if (n <= 0) return 1;
@@ -92,6 +92,13 @@ function checkPalindrome(s) {
 
 // console.log(checkPalindrome("hannah"))
 
-function fib(n) {}
+// 0509
+function fib(n, memo = {}) {
+	if (n === 0 || n === 1) return n;
+	if (memo[n]) return memo[n];
 
-// console.log(fib(2));
+	memo[n] = fib(n - 1) + fib(n - 2);
+	return memo[n];
+}
+
+console.log(fib(3));
