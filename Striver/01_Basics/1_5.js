@@ -1,26 +1,36 @@
-function recursion(i, n)
-{
-    if(i > n) return;
-
-    recursion(i + 1, n)
-    
-    console.log(i);
+function recursion(i, n) {
+	if (i > n) return;
+	recursion(i + 1, n);
+	console.log(i);
 }
-// recursion(1, 5)
+// recursion(1, 5);
 
-function sum(n)
-{
-    if(n <= 0) return 0;
+function printName(name, i, n) {
+	if (i > n) return;
 
-    return (n + sum(n - 1));
+	printName(name, i + 1, n);
+	console.log(name);
+}
+// printName('Hello', 1, 5);
+
+function sum(n) {
+	if (n <= 0) return 0;
+
+	return n + sum(n - 1);
 }
 // console.log(sum(6));
 
-function factorial(n)
-{
-    if(n <= 0) return 1;
+function sum2(number, current) {
+	if (current > number) return 0;
 
-    return (n * factorial(n - 1));
+	return current + sum2(number, current + 1);
+}
+console.log(sum2(8, 1));
+
+function factorial(n) {
+	if (n <= 0) return 1;
+
+	return n * factorial(n - 1);
 }
 // console.log(factorial(3))
 
@@ -53,36 +63,35 @@ function factorial(n)
 //     return arr;
 // }
 
-function revArray(arr)
-{
-    temp = arr[0];
-    arr[0] = arr[arr.length - 1]
-    arr[arr.length - 1] = temp;
+function revArray(arr) {
+	temp = arr[0];
+	arr[0] = arr[arr.length - 1];
+	arr[arr.length - 1] = temp;
 
-    let newArr = arr.remove[0];
-    
-    return revArray(newArr);
+	let newArr = arr.remove[0];
+
+	return revArray(newArr);
 }
 // console.log(revArray([1,2,3,4,5]));
 
-function checkPalindrome(s)
-{
-    if(s.length === 1 || s.length === 0) return true;
+// 0125
+function isPalindrome(s) {
+	s = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+	let result = checkPalindrome(s);
 
-    if( s[0] === s[s.length - 1] )
-    {
-        checkPalindrome( s.substring(1, s.length - 1) ) ;
-        return true
-    }
-    else
-        return false;
+	return result;
+}
+
+function checkPalindrome(s) {
+	if (s.length === 1 || s.length === 0) return true;
+
+	if (s[0] === s[s.length - 1]) {
+		return checkPalindrome(s.substring(1, s.length - 1));
+	} else return false;
 }
 
 // console.log(checkPalindrome("hannah"))
 
-function fib(n)
-{
-    
-}
+function fib(n) {}
 
-console.log(fib(2));
+// console.log(fib(2));

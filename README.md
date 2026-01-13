@@ -196,4 +196,8 @@
 
 # Sunday 20260112
 
-#### Striver 4.3.5, AlgoMap 6.1
+#### Striver 4.3.5, AlgoMap 6.1 - 6.4
+
+# Monday 20260113
+
+#### AlgoMap 6.5 - 6.8

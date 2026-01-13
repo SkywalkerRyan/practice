@@ -1,4 +1,4 @@
-// Striver 4.1.8
+// Striver 4.1.8, AlgoMap 6.7
 function search(nums: number[], target: number): number {
 	let left = 0;
 	let right = nums.length - 1;

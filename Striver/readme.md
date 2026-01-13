@@ -17,6 +17,7 @@ https://algomap.io/roadmap
 | Prs          | Prefix Sum            |
 | Bis          | Binary Search         |
 | Mat          | Matrix                |
+| Rec          | Recursion             |
 
 # Arrays
 
@@ -129,6 +130,8 @@ https://algomap.io/roadmap
 
     S After basic return to Reverse a LL [Recursive] in 6.3.3
 
+# Tree/BST/Trie
+
 # Sorting
 
     S After basic return to Count Inversions and Reverse pair in 3.3
@@ -140,8 +143,6 @@ https://algomap.io/roadmap
 # Bit Manipulation
 
     S After basic return to "Count number of subarrays with given xor K" in 3.3
-
-# Tree/BST/Trie
 
 # Heaps
 

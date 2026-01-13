@@ -1,4 +1,4 @@
-// Striver 4.2.2
+// Striver 4.2.2, AlgoMap 6.8
 function minEatingSpeed(piles: number[], h: number): number {
 	if (piles.length === 1) return Math.ceil(piles[0] / h);
 
