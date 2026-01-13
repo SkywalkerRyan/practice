@@ -1,4 +1,4 @@
-// Striver 4.3.2
+// Striver 4.3.2, AlgoMap 6.5
 function searchMatrix(matrix: number[][], target: number): boolean {
 	let top = 0;
 	let bot = matrix.length - 1;
