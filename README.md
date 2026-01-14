@@ -178,26 +178,30 @@
 
 #### Striver 4.2.2 - 4.2.5
 
-# Wednesday 20260108
+# Wednesday 20260107
 
 #### Striver 4.2.6
 
-# Thursday 20260109
+# Thursday 20260108
 
 #### Striver 4.2.7
 
-# Friday 20260110
+# Friday 20260109
 
 #### Striver 4.2.8, 4.3.1 - 4.3.3
 
-# Saturday 20260111
+# Saturday 20260110
 
 #### Striver 4.3.4
 
-# Sunday 20260112
+# Sunday 20260111
 
 #### Striver 4.3.5, AlgoMap 6.1 - 6.4
 
-# Monday 20260113
+# Monday 20260112
 
-#### AlgoMap 6.5 - 6.8
+#### AlgoMap 6.5 - 6.8, Striver 1.5.1 - 1.5.9
+
+# Tuesday 20260113
+
+#### Striver 7.1.2

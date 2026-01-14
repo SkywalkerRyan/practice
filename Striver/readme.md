@@ -130,6 +130,11 @@ https://algomap.io/roadmap
 
     S After basic return to Reverse a LL [Recursive] in 6.3.3
 
+#### S 7.1 Get a Strong Hold
+
+    S 7.1.1 Recursive Implementation of atoi()
+    S 7.1.2 Pow(x, n)
+
 # Tree/BST/Trie
 
 # Sorting
