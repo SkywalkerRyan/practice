@@ -18,6 +18,7 @@ https://algomap.io/roadmap
 | Bis          | Binary Search         |
 | Mat          | Matrix                |
 | Rec          | Recursion             |
+| Bac          | Backtracking          |
 
 # Arrays
 

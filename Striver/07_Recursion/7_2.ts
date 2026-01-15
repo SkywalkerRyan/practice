@@ -2,20 +2,41 @@
 function GenBinStr(len: number): string[] {
 	let res = [];
 
-	backtrack('', res, len);
+	backtrackBinStr('', res, len);
 
 	return res;
 }
 
-function backtrack(current: string, res: string[], len: number): void {
+function backtrackBinStr(current: string, res: string[], len: number): void {
 	if (current.length === len) {
 		res.push(current);
 		return;
 	}
 
-	backtrack(current + '0', res, len);
+	backtrackBinStr(current + '0', res, len);
 
-	if (current === '' || current[current.length - 1] === '0') backtrack(current + '1', res, len);
+	if (current === '' || current[current.length - 1] === '0') backtrackBinStr(current + '1', res, len);
 }
 
-console.log(GenBinStr(5));
+// console.log(GenBinStr(5));
+
+// 0022
+function generateParenthesis(n: number): string[] {
+	let res = [];
+
+	backtrackParen('', res, 0, n);
+
+	return res;
+}
+
+function backtrackParen(cur: string, res: string[], len: number, n: number): void {
+	if (cur.length === n * 2) {
+		res.push(cur);
+		return;
+	}
+
+	if (len < n) backtrackParen(cur + '(', res, len + 1, n);
+
+	if (cur.length !== len * 2) backtrackParen(cur + ')', res, len, n);
+}
+// console.log(generateParenthesis(3));
