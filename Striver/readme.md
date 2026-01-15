@@ -136,6 +136,10 @@ https://algomap.io/roadmap
     S 7.1.2 Pow(x, n)
     S 7.1.3 Count Good numbers
 
+#### S 7.2 Subsequence Pattern
+
+    S 7.2.1 Generate all binary strings
+
 # Tree/BST/Trie
 
 # Sorting
