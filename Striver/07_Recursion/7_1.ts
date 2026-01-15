@@ -67,4 +67,26 @@ function insertSorted(stk: number[], element: number): void {
 	insertSorted(stk, element);
 	stk.push(temp);
 }
-console.log(sortStack([4, 1, 3, 2]));
+// console.log(sortStack([4, 1, 3, 2]));
+
+function reverseStack(stk: number[]): number[] {
+	if (stk.length <= 1) return stk;
+
+	let temp = stk.pop();
+	reverseStack(stk);
+	insertAtBot(stk, temp);
+
+	return stk;
+}
+
+function insertAtBot(stk: number[], element: number): void {
+	if (stk.length === 0) {
+		stk.push(element);
+		return;
+	}
+
+	let temp = stk.pop();
+	insertAtBot(stk, element);
+	stk.push(temp);
+}
+// console.log(reverseStack([4, 1, 3, 2]));
