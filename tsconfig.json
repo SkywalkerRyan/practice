@@ -7,6 +7,6 @@
 	"ts-node": {
 		"esm": true
 	},
-	"target": "es2015",
-	"lib": ["es2017", "dom"]
+	"target": "es2020",
+	"lib": ["es2020", "dom"]
 }

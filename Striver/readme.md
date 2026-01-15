@@ -132,8 +132,9 @@ https://algomap.io/roadmap
 
 #### S 7.1 Get a Strong Hold
 
-    S 7.1.1 Recursive Implementation of atoi()
+    S 7.1.1 Recursive Implementation of atoi(), Come back to this
     S 7.1.2 Pow(x, n)
+    S 7.1.3 Count Good numbers
 
 # Tree/BST/Trie
 
