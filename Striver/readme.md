@@ -140,6 +140,7 @@ https://algomap.io/roadmap
 #### S 7.2 Subsequence Pattern
 
     S 7.2.1 Generate all binary strings
+    S 7.2.3 Print all subsequences/Power Set, Return after bit manipulation
 
 # Tree/BST/Trie
 
@@ -154,6 +155,7 @@ https://algomap.io/roadmap
 # Bit Manipulation
 
     S After basic return to "Count number of subarrays with given xor K" in 3.3
+    S After basic return to "Print all subsequences/Power Set", S 7.2.3
 
 # Heaps
 
