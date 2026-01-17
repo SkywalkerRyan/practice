@@ -1,4 +1,4 @@
-// 0078
+// Striver 7.2.3
 function subsets(nums: number[]): number[][] {
 	let res = [];
 
