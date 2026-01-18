@@ -75,7 +75,7 @@ function subsets(nums: number[]): number[][] {
 	return res;
 }
 
-function backtrackSubset(nums: number[], res: number[][], ids: number, current: number[]) {
+function backtrackSubset(nums: number[], res: number[][], ids: number, current: number[]): void {
 	if (ids >= nums.length) {
 		res.push(current);
 		return;
@@ -84,4 +84,21 @@ function backtrackSubset(nums: number[], res: number[][], ids: number, current: 
 	backtrackSubset(nums, res, ids + 1, current);
 	backtrackSubset(nums, res, ids + 1, [...current, nums[ids]]);
 }
-console.log(subsets([3, 1, 2]));
+// console.log(subsets([3, 1, 2]));
+
+// Striver 7.2.5
+function countSubsequenceWithTargetSum(nums: number[], k: number): number {
+	return backtrackCountTargetSum(0, 0, nums, k);
+}
+
+function backtrackCountTargetSum(current: number, curIdx: number, nums: number[], k: number): number {
+	if (current === k) return 1;
+	if (current > k || curIdx >= nums.length) return 0;
+
+	return (
+		backtrackCountTargetSum(current, curIdx + 1, nums, k) +
+		backtrackCountTargetSum(current + nums[curIdx], curIdx + 1, nums, k)
+	);
+}
+// console.log(countSubsequenceWithTargetSum([4, 9, 2, 5, 1], 10));
+// console.log(countSubsequenceWithTargetSum([4, 2, 10, 5, 1, 3], 5));

@@ -213,3 +213,15 @@
 # Thursday 20260115
 
 #### Striver 7.1.4 - 7.1.5, 7.2.1
+
+# Friday 20260116
+
+#### Striver 7.2.2
+
+# Saturday 20260117
+
+#### Striver 7.2.3
+
+# Sunday 20260118
+
+#### Striver 7.2.5

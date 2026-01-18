@@ -141,6 +141,7 @@ https://algomap.io/roadmap
 
     S 7.2.1 Generate all binary strings
     S 7.2.3 Print all subsequences/Power Set, Return after bit manipulation
+    S 7.2.5 Count all subsequences with sum K
 
 # Tree/BST/Trie
 
