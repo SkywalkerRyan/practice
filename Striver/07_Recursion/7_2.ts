@@ -168,3 +168,26 @@ function backtrackComSum2(
 }
 
 // console.log(combinationSum2([10, 1, 2, 7, 6, 1, 5], 8));
+
+// Striver 7.2.9
+function subsetSums(nums: number[]): number[] {
+	let res = [];
+
+	nums = nums.sort((a, b) => a - b);
+
+	backtrackSubsetSums(0, 0, nums, res);
+
+	return res;
+}
+
+function backtrackSubsetSums(curIdx: number, curSum: number, nums: number[], res: number[]): void {
+	if (curIdx >= nums.length) {
+		res.push(curSum);
+		return;
+	}
+
+	backtrackSubsetSums(curIdx + 1, curSum, nums, res);
+	backtrackSubsetSums(curIdx + 1, curSum + nums[curIdx], nums, res);
+}
+// console.log(subsetSums([2, 3]));
+console.log(subsetSums([5, 2, 1]));
