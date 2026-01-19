@@ -142,6 +142,8 @@ https://algomap.io/roadmap
     S 7.2.1 Generate all binary strings
     S 7.2.3 Print all subsequences/Power Set, Return after bit manipulation
     S 7.2.5 Count all subsequences with sum K
+    S 7.2.8 Combination Sum II, Why the for loop?
+    S 7.2.10 Subsets II, Why the for loop?
 
 # Tree/BST/Trie
 

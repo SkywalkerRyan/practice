@@ -190,4 +190,27 @@ function backtrackSubsetSums(curIdx: number, curSum: number, nums: number[], res
 	backtrackSubsetSums(curIdx + 1, curSum + nums[curIdx], nums, res);
 }
 // console.log(subsetSums([2, 3]));
-console.log(subsetSums([5, 2, 1]));
+// console.log(subsetSums([5, 2, 1]));
+
+// 0090
+function subsetsWithDup(nums: number[]): number[][] {
+	let res = [];
+
+	nums = nums.sort((a, b) => a - b);
+	backtrackSubsetWithDup([], 0, nums, res);
+
+	return res;
+}
+
+function backtrackSubsetWithDup(cur: number[], curIdx: number, nums: number[], res: number[][]): void {
+	res.push([...cur]);
+
+	for (let i = curIdx; i < nums.length; i++) {
+		if (i > curIdx && nums[i] === nums[i - 1]) continue;
+
+		cur.push(nums[i]);
+		backtrackSubsetWithDup(cur, i + 1, nums, res);
+		cur.pop();
+	}
+}
+// console.log(subsetsWithDup([1, 2, 2]));
