@@ -19,4 +19,4 @@ function backtrackSubsetWithDup(cur: number[], curIdx: number, nums: number[], r
 		cur.pop();
 	}
 }
-// console.log(subsetsWithDup([1, 2, 2]));
+console.log(subsetsWithDup([1, 2, 2]));
