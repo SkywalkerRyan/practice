@@ -144,6 +144,7 @@ https://algomap.io/roadmap
     S 7.2.5 Count all subsequences with sum K
     S 7.2.8 Combination Sum II, Why the for loop?
     S 7.2.10 Subsets II, Why the for loop?
+    S 7.2.12 Letter Combinations of a Phone number
 
 # Tree/BST/Trie
 
