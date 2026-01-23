@@ -146,6 +146,12 @@ https://algomap.io/roadmap
     S 7.2.10 Subsets II, Why the for loop?
     S 7.2.12 Letter Combinations of a Phone number
 
+#### S 7.3 Trying out all combos/ Hards
+
+    S 7.3.1 Palindrome Partitioning
+    S 7.3.2 Word Search, Return after finishing Depth First Search
+    S 7.3.3 Rat in a Maze, Return after finishing Depth First Search
+
 # Tree/BST/Trie
 
 # Sorting
@@ -170,3 +176,6 @@ https://algomap.io/roadmap
     S After basic return to "Sum of subarray minimum" in 9.3.6
 
 # Graphs/Union Finds
+
+    S 7.3.2 Word Search, Return after finishing Depth First Search
+    S 7.3.3 Rat in a Maze, Return after finishing Depth First Search
