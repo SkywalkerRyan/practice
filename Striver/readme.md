@@ -151,6 +151,11 @@ https://algomap.io/roadmap
     S 7.3.1 Palindrome Partitioning
     S 7.3.2 Word Search, Return after finishing Depth First Search
     S 7.3.3 Rat in a Maze, Return after finishing Depth First Search
+    S 7.3.5 Word Break, Return after Dynamic programming
+
+#### AM Recursive Backtracking
+
+    AM 10.2 Permute
 
 # Tree/BST/Trie
 
@@ -174,6 +179,7 @@ https://algomap.io/roadmap
 # Dynamic Programming
 
     S After basic return to "Sum of subarray minimum" in 9.3.6
+    S 7.3.5 Word Break, Return after Dynamic programming
 
 # Graphs/Union Finds
 

@@ -1,4 +1,4 @@
-// Striver 7.2.3
+// Striver 7.2.3, AM 10.1
 function subsets(nums: number[]): number[][] {
 	let res = [];
 

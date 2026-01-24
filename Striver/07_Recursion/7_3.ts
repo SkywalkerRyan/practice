@@ -33,3 +33,8 @@ function checkPalindrome(s: string, start: number, end: number): boolean {
 	return true;
 }
 // console.log(partition('abab'));
+
+// 0139
+function wordBreak(s: string, wordDict: string[]): boolean {
+	return false;
+}
