@@ -69,3 +69,34 @@ function backtrackCombine(cur: number[], startIdx: number, res: number[][], n: n
 	}
 }
 // console.log(combine(4, 2));
+
+// 0039
+function combinationSum(candidates: number[], target: number): number[][] {
+	let res = [];
+
+	backtrackCombiSum([], 0, 0, res, candidates, target);
+
+	return res;
+}
+
+function backtrackCombiSum(
+	cur: number[],
+	curIdx: number,
+	curSum: number,
+	res: number[][],
+	nums: number[],
+	target: number
+): void {
+	if (curSum === target) {
+		res.push([...cur]);
+		return;
+	}
+
+	if (curSum > target || curIdx >= nums.length) return;
+
+	backtrackCombiSum(cur, curIdx + 1, curSum, res, nums, target);
+	cur.push(nums[curIdx]);
+	backtrackCombiSum(cur, curIdx, curSum + nums[curIdx], res, nums, target);
+	cur.pop();
+}
+console.log(combinationSum([2, 3, 6, 7], 7));
