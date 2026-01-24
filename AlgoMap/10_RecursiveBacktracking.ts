@@ -99,4 +99,39 @@ function backtrackCombiSum(
 	backtrackCombiSum(cur, curIdx, curSum + nums[curIdx], res, nums, target);
 	cur.pop();
 }
-console.log(combinationSum([2, 3, 6, 7], 7));
+// console.log(combinationSum([2, 3, 6, 7], 7));
+
+// 0017
+function letterCombinations(digits: string): string[] {
+	let res = [];
+
+	backtrackLtrCmb('', 0, res, digits);
+
+	return res;
+}
+
+function backtrackLtrCmb(cur: string, curIdx: number, res: string[], nums: string): void {
+	if (cur.length === nums.length) {
+		res.push(cur);
+		return;
+	}
+
+	const letters = digitToLetters[nums[curIdx]];
+	for (let i = 0; i < letters.length; i++) {
+		// cur.push(letters[i]);
+		backtrackLtrCmb(cur + letters[i], curIdx + 1, res, nums);
+	}
+}
+
+const digitToLetters: Record<string, string> = {
+	'2': 'abc',
+	'3': 'def',
+	'4': 'ghi',
+	'5': 'jkl',
+	'6': 'mno',
+	'7': 'pqrs',
+	'8': 'tuv',
+	'9': 'wxyz',
+};
+
+// console.log(letterCombinations('23'));
