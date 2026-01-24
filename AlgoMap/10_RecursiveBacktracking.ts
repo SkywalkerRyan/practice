@@ -30,7 +30,7 @@ function permute(nums: number[]): number[][] {
 	return res;
 }
 
-function backtrackPermute(cur: number[], curIdx: number, res: number[][], nums: number[], len: number): void {
+function backtrackPermute(cur: number[], res: number[][], nums: number[], len: number): void {
 	if (cur.length === len) {
 		res.push([...cur]);
 		return;
@@ -39,10 +39,33 @@ function backtrackPermute(cur: number[], curIdx: number, res: number[][], nums: 
 	for (let i = 0; i < nums.length; i++) {
 		let temp = nums.splice(i, 1)[0];
 		cur.push(temp);
-		backtrackPermute(cur, curIdx, res, nums, len);
+		backtrackPermute(cur, res, nums, len);
 		cur.pop();
 		nums.splice(i, 0, temp);
 	}
 }
 
 // console.log(permute([1, 2, 3]));
+
+// 0077
+function combine(n: number, k: number): number[][] {
+	let res = [];
+
+	backtrackCombine([], 1, res, n, k);
+
+	return res;
+}
+
+function backtrackCombine(cur: number[], startIdx: number, res: number[][], n: number, k: number): void {
+	if (cur.length === k) {
+		res.push([...cur]);
+		return;
+	}
+
+	for (let i = startIdx; i <= n; i++) {
+		cur.push(i);
+		backtrackCombine(cur, i + 1, res, n, k);
+		cur.pop();
+	}
+}
+// console.log(combine(4, 2));
