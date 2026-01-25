@@ -156,6 +156,8 @@ https://algomap.io/roadmap
 #### AM Recursive Backtracking
 
     AM 10.2 Permute
+    AM 10.7 Jump Game II
+    AM 10.8 Word Search, Return after finishing Depth First Search
 
 # Tree/BST/Trie
 
