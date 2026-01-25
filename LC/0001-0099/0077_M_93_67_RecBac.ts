@@ -1,4 +1,4 @@
-// AM 10.3
+// AlgoMap 10.3
 function combine(n: number, k: number): number[][] {
 	let res = [];
 

@@ -1,4 +1,4 @@
-// AM 10.2
+// AlgoMap 10.2
 function permute(nums: number[]): number[][] {
 	let res = [];
 	let len = nums.length;

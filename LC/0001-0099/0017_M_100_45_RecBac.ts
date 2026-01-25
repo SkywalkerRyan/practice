@@ -1,4 +1,4 @@
-// Striver 7.2.12
+// Striver 7.2.12, AlgoMap 10.5
 function letterCombinations(digits: string): string[] {
 	if (digits === '') return [];
 

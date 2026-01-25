@@ -1,4 +1,4 @@
-// Striver 7.2.2
+// Striver 7.2.2, AlgoMap 10.6
 function generateParenthesis(n: number): string[] {
 	let res = [];
 

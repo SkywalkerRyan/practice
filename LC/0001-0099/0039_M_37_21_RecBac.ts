@@ -1,4 +1,4 @@
-// Striver 7.27
+// Striver 7.27, AlgoMap 10.4
 function combinationSum(candidates: number[], target: number): number[][] {
 	let res = [];
 
