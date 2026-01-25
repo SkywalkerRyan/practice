@@ -1,6 +1,6 @@
 // Striver 13.1.8
 function levelOrder(root: TreeNode | null): number[][] {
-	if (root === null) return;
+	if (root === null) return [];
 
 	let res = [];
 

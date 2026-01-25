@@ -240,4 +240,8 @@
 
 # Saturday 20260124
 
-#### AlgoMap 10.4 - 10.6, Striver 13.1 - 13.7
+#### AlgoMap 10.4 - 10.6, Striver 13.1.1 - 13.1.7
+
+# Sunday 20260125
+
+#### Striver 13.1.8 -

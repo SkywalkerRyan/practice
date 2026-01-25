@@ -165,6 +165,7 @@ https://algomap.io/roadmap
 #### S 13.1 Traversals
 
     S 13.1.8 Binary Tree Level Order Traversal
+    S 13.1.10 Binary Tree Inorder Traversal, How?!
 
 # BST
 
