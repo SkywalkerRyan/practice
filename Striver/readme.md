@@ -19,6 +19,7 @@ https://algomap.io/roadmap
 | Mat          | Matrix                |
 | Rec          | Recursion             |
 | Bac          | Backtracking          |
+| Btr          | Binary Tree           |
 
 # Arrays
 
