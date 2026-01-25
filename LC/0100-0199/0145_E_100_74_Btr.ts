@@ -1,4 +1,4 @@
-// 0145
+// Striver 13.1.7
 function postorderTraversal(root: TreeNode | null): number[] {
 	let res = [];
 

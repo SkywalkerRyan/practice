@@ -160,7 +160,15 @@ https://algomap.io/roadmap
     AM 10.7 Jump Game II
     AM 10.8 Word Search, Return after finishing Depth First Search
 
-# Tree/BST/Trie
+# Tree
+
+#### S 13.1 Traversals
+
+    S 13.1.8 Binary Tree Level Order Traversal
+
+# BST
+
+# Trie
 
 # Sorting
 

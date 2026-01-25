@@ -1,4 +1,4 @@
-// 0094
+// Striver 13.1.6
 function inorderTraversal(root: TreeNode | null): number[] {
 	let res = [];
 
