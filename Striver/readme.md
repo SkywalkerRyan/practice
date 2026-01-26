@@ -169,6 +169,10 @@ https://algomap.io/roadmap
     S 13.1.11 Post-order Traversal of Binary Tree using 2 stack, How?!
     S 13.1.12 Post-order Traversal of Binary Tree using 1 stack, How?!
 
+#### S 13.2 Medium Problems
+
+    S 13.2.1 Check if the Binary tree is height-balanced or not
+
 # BST
 
 # Trie
