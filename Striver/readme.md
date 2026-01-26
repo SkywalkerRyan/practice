@@ -166,6 +166,8 @@ https://algomap.io/roadmap
 
     S 13.1.8 Binary Tree Level Order Traversal
     S 13.1.10 Binary Tree Inorder Traversal, How?!
+    S 13.1.11 Post-order Traversal of Binary Tree using 2 stack, How?!
+    S 13.1.12 Post-order Traversal of Binary Tree using 1 stack, How?!
 
 # BST
 

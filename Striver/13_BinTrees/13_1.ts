@@ -98,7 +98,7 @@ function preorderTraversalIterative(root: TreeNode | null): number[] {
 }
 
 // 0094
-function inorderTraversal(root: TreeNode | null): number[] {
+function inorderTraversalIterative(root: TreeNode | null): number[] {
 	if (root === null) return [];
 
 	let res = [];
@@ -114,6 +114,57 @@ function inorderTraversal(root: TreeNode | null): number[] {
 			let temp = stack.pop();
 			res.push(temp.val);
 			cur = temp.right;
+		}
+	}
+
+	return res;
+}
+
+// 0145
+function postorderTraversalIterative(root: TreeNode | null): number[] {
+	if (root === null) return [];
+
+	let res = [];
+	let stack1 = [];
+	let stack2 = [];
+	stack1.push(root);
+
+	while (stack1.length > 0) {
+		let temp = stack1.pop();
+		stack2.push(temp);
+
+		if (temp.left) stack1.push(temp.left);
+		if (temp.right) stack1.push(temp.right);
+	}
+	while (stack2.length > 0) {
+		let temp = stack2.pop();
+		res.push(temp.val);
+	}
+
+	return res;
+}
+
+// 0145
+function postorderTraversalIter(root: TreeNode | null): number[] {
+	if (root === null) return [];
+
+	let cur: TreeNode | null = root;
+	let stack: TreeNode[] = [];
+	let res: number[] = [];
+	let prev: TreeNode | null = null;
+
+	while (cur != null || stack.length > 0) {
+		if (cur != null) {
+			stack.push(cur);
+			cur = cur.left;
+		} else {
+			let temp = stack[stack.length - 1];
+			if (temp.right != null && temp.right !== prev) {
+				cur = temp.right;
+			} else {
+				res.push(temp.val);
+				prev = stack.pop();
+			}
 		}
 	}
 
