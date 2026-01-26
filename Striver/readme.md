@@ -173,6 +173,7 @@ https://algomap.io/roadmap
 
     S 13.2.2 Check if the Binary tree is height-balanced or not
     S 13.2.3 Diameter of Binary Tree
+    S 13.2.4 Binary Tree Maximum Path Sum
 
 # BST
 
