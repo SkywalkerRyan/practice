@@ -170,3 +170,24 @@ function postorderTraversalIter(root: TreeNode | null): number[] {
 
 	return res;
 }
+
+// Striver 13.1.13
+function allTraversal(root: TreeNode | null): number[][] {
+	let resPre = [];
+	let resPost = [];
+	let resIn = [];
+
+	travAllOrder(root, resPre, resIn, resPost);
+
+	return [resPre, resIn, resPost];
+}
+
+function travAllOrder(node: TreeNode | null, resPre: number[], resIn: number[], resPost: number[]): void {
+	if (node === null) return;
+
+	resPre.push(node.val);
+	travAllOrder(node.left, resPre, resIn, resPost);
+	resIn.push(node.val);
+	travAllOrder(node.right, resPre, resIn, resPost);
+	resPost.push(node.val);
+}

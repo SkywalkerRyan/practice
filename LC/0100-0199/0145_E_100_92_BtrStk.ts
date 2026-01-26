@@ -1,4 +1,4 @@
-// 0145
+// Striver 13.1.12
 function postorderTraversalIter(root: TreeNode | null): number[] {
 	if (root === null) return [];
 
