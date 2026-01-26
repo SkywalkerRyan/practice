@@ -1,4 +1,4 @@
-// 0110
+// Striver 13.2.2
 function isBalanced(root: TreeNode | null): boolean {
 	if (root === null) return true;
 

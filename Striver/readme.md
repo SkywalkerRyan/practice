@@ -171,7 +171,8 @@ https://algomap.io/roadmap
 
 #### S 13.2 Medium Problems
 
-    S 13.2.1 Check if the Binary tree is height-balanced or not
+    S 13.2.2 Check if the Binary tree is height-balanced or not
+    S 13.2.3 Diameter of Binary Tree
 
 # BST
 
