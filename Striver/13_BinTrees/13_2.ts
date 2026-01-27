@@ -284,3 +284,23 @@ function topView(node: TreeNode | null): number[] {
 	let sorted = [...map.keys()].sort((a, b) => a - b);
 	return sorted.map((col) => map.get(col));
 }
+
+// Striver 7.2.10
+function botView(node: TreeNode | null): number[] {
+	if (node === null) return [];
+
+	let map = new Map<number, number>();
+	let queue: [TreeNode, number][] = [[node, 0]];
+
+	while (queue.length > 0) {
+		let [cur, col] = queue.shift();
+
+		map.set(col, cur.val);
+
+		if (cur.left) queue.push([cur.left, col - 1]);
+		if (cur.right) queue.push([cur.right, col + 1]);
+	}
+
+	let sorted = [...map.keys()].sort((a, b) => a - b);
+	return sorted.map((col) => map.get(col));
+}
