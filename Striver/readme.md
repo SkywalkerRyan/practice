@@ -178,6 +178,7 @@ https://algomap.io/roadmap
     S 13.2.6 Zig Zag Traversal of Binary Tree, try recursive approach
     S 13.2.7 Boundary Traversal of Binary Tree
     S 13.2.8 Vertical Order Traversal of a Binary Tree
+    S 13.2.9 Top view of a Binary Tree
 
 # BST
 

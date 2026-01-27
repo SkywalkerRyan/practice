@@ -245,3 +245,42 @@ function traverseVertical(node: TreeNode | null, row: number, col: number, map: 
 	traverseVertical(node.right, row + 1, col + 1, map);
 }
 
+// Striver 7.2.9, Wrong, need bfs.
+// function topView(node: TreeNode | null): number[] {
+// 	if (node === null) return;
+
+// 	let map = new Map();
+
+// 	traverseTopView(node, 0, map);
+
+// 	let sorted = [...map.keys()].sort((a, b) => a - b);
+// 	return sorted.map((col) => map.get(col));
+// }
+
+// function traverseTopView(node: TreeNode | null, col: number, map: Map<number, number>): void {
+// 	if (node === null) return;
+
+// 	if (!map.has(col)) map.set(col, node.val);
+
+// 	traverseTopView(node.left, col - 1, map);
+// 	traverseTopView(node.right, col + 1, map);
+// }
+
+// Striver 7.2.9
+function topView(node: TreeNode | null): number[] {
+	if (node === null) return [];
+
+	let map = new Map<number, number>();
+	let queue: [TreeNode, number][] = [[node, 0]];
+
+	while (queue.length > 0) {
+		let [cur, col] = queue.shift();
+
+		if (!map.has(col)) map.set(col, cur.val);
+
+		if (cur.left != null) queue.push([cur.left, col - 1]);
+		if (cur.right != null) queue.push([cur.right, col + 1]);
+	}
+	let sorted = [...map.keys()].sort((a, b) => a - b);
+	return sorted.map((col) => map.get(col));
+}
