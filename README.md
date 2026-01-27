@@ -248,4 +248,8 @@
 
 # Monday 20260126
 
-#### Striver 13.2.1 -
+#### Striver 13.2.1 - 13.2.8
+
+# Tuesday 20260127
+
+#### Striver 13.2.9

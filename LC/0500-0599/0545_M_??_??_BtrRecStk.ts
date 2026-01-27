@@ -1,4 +1,4 @@
-// 0545
+// Striver 13.2.7
 function boundary(root: TreeNode | null): number[] {
 	if (root === null) return [];
 	if (root.left === null && root.right === null) return [root.val];
