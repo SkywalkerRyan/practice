@@ -245,7 +245,7 @@ function traverseVertical(node: TreeNode | null, row: number, col: number, map: 
 	traverseVertical(node.right, row + 1, col + 1, map);
 }
 
-// Striver 7.2.9, Wrong, need bfs.
+// Striver 13.2.9, Wrong, need bfs.
 // function topView(node: TreeNode | null): number[] {
 // 	if (node === null) return;
 
@@ -266,7 +266,7 @@ function traverseVertical(node: TreeNode | null, row: number, col: number, map: 
 // 	traverseTopView(node.right, col + 1, map);
 // }
 
-// Striver 7.2.9
+// Striver 13.2.9
 function topView(node: TreeNode | null): number[] {
 	if (node === null) return [];
 
@@ -285,7 +285,7 @@ function topView(node: TreeNode | null): number[] {
 	return sorted.map((col) => map.get(col));
 }
 
-// Striver 7.2.10
+// Striver 13.2.10
 function botView(node: TreeNode | null): number[] {
 	if (node === null) return [];
 
@@ -303,4 +303,44 @@ function botView(node: TreeNode | null): number[] {
 
 	let sorted = [...map.keys()].sort((a, b) => a - b);
 	return sorted.map((col) => map.get(col));
+}
+
+// 0199 Works
+// function rightSideView(root: TreeNode | null): number[] {
+// 	if (root === null) return [];
+
+// 	let map = new Map<number, number>();
+
+// 	traverseRighSideView(root, 0, map);
+
+// 	return [...map.values()];
+// }
+
+// function traverseRighSideView(node: TreeNode | null, row: number, map: Map<number, number>): void {
+// 	if (node === null) return;
+
+// 	map.set(row, node.val);
+
+// 	if (node.left != null) traverseRighSideView(node.left, row + 1, map);
+// 	if (node.right != null) traverseRighSideView(node.right, row + 1, map);
+// }
+
+// 0199 but better
+function rightSideView(root: TreeNode | null): number[] {
+	if (root === null) return [];
+
+	let res = [];
+
+	traverseRighSideView(root, 0, res);
+
+	return res;
+}
+
+function traverseRighSideView(node: TreeNode | null, row: number, res: number[]): void {
+	if (node === null) return;
+
+	if (res.length === row) res.push(node.val);
+
+	if (node.right != null) traverseRighSideView(node.right, row + 1, res);
+	if (node.left != null) traverseRighSideView(node.left, row + 1, res);
 }
