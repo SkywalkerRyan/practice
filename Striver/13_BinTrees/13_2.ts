@@ -125,3 +125,32 @@ function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
 
 	return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 }
+
+// 0103
+function zigzagLevelOrderStk(root: TreeNode | null): number[][] {
+	if (root === null) return [];
+
+	let res = [];
+	let queue = [root];
+	let forward = true;
+
+	while (queue.length > 0) {
+		let len = queue.length;
+		let temp = [];
+
+		for (let index = 0; index < len; index++) {
+			let pop = queue.shift();
+
+			if (pop.left != null) queue.push(pop.left);
+			if (pop.right != null) queue.push(pop.right);
+
+			temp.push(pop.val);
+		}
+		if (!forward) temp.reverse();
+
+		res.push([...temp]);
+		forward = !forward;
+	}
+
+	return res;
+}

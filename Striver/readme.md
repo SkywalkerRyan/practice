@@ -175,6 +175,7 @@ https://algomap.io/roadmap
     S 13.2.3 Diameter of Binary Tree
     S 13.2.4 Binary Tree Maximum Path Sum
     S 13.2.5 Check if two trees are identical or not
+    S 13.2.6 Zig Zag Traversal of Binary Tree, try recursive approach
 
 # BST
 
