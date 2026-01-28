@@ -179,6 +179,9 @@ https://algomap.io/roadmap
     S 13.2.7 Boundary Traversal of Binary Tree
     S 13.2.8 Vertical Order Traversal of a Binary Tree
     S 13.2.9 Top view of a Binary Tree
+    S 13.2.12 Symmetric Binary Tree
+
+#### S 13.3 Hard Problems
 
 # BST
 
