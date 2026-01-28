@@ -183,6 +183,8 @@ https://algomap.io/roadmap
 
 #### S 13.3 Hard Problems
 
+    S 13.3.2 LCA in Binary Tree, How?!
+
 # BST
 
 # Trie
