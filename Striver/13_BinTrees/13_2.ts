@@ -1,3 +1,5 @@
+import { TreeNode } from '../../Practices/BinaryTrees/node';
+
 // 0104
 function maxDepth(root: TreeNode | null): number {
 	let res = 0;
