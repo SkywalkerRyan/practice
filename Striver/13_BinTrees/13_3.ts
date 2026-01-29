@@ -1,3 +1,5 @@
+import { TreeNode } from '../../Practices/BinaryTrees/node';
+
 // 0257
 function binaryTreePaths(root: TreeNode | null): string[] {
 	if (root === null) return [];
@@ -86,3 +88,49 @@ function widthOfBinaryTree(root: TreeNode | null): number {
 
 	return width;
 }
+
+// Striver 13.3.4
+function sumOfChildren(root: TreeNode | null): void {
+	if (root === null) return;
+
+	return traverseSumOfChildren(root);
+}
+
+function traverseSumOfChildren(node: TreeNode | null): void {
+	if (node === null) return;
+
+	let sum = 0;
+	if (node.left) sum += node.left.val;
+	if (node.right) sum += node.right.val;
+
+	if (sum < node.val) {
+		if (node.left) node.left.val = node.val;
+		if (node.right) node.right.val = node.val;
+	}
+
+	traverseSumOfChildren(node.left);
+	traverseSumOfChildren(node.right);
+
+	if (node.left || node.right) {
+		let _sum = 0;
+		if (node.left) _sum += node.left.val;
+		if (node.right) _sum += node.right.val;
+		node.val = _sum;
+	}
+}
+
+// Test
+const root = new TreeNode(3);
+root.left = new TreeNode(4);
+root.right = new TreeNode(6);
+root.left.left = new TreeNode(10);
+root.left.right = new TreeNode(3);
+
+//       10
+//      /  \
+//     4    6
+//    / \
+//   1   3
+
+sumOfChildren(root);
+console.log('After:', root.val, root.left?.val, root.right?.val, root.left.left.val, root.left.right.val);

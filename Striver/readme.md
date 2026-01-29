@@ -185,6 +185,7 @@ https://algomap.io/roadmap
 
     S 13.3.2 LCA in Binary Tree, How?!
     S 13.3.3 Maximum width of a Binary Tree
+    S 13.3.4 Check for Children Sum Property, How?!
 
 # BST
 
