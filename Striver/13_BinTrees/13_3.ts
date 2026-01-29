@@ -195,3 +195,41 @@ function setParents(root: TreeNode | null, parents: Map<TreeNode, TreeNode | nul
 		}
 	}
 }
+
+// Striver 13.3.6
+function timeToBurn(root: TreeNode | null, start: TreeNode | null): number {
+	if (root === null || start === null) return 0;
+
+	let parents = new Map<TreeNode, TreeNode | null>();
+
+	setParents(root, parents);
+
+	let distance = 0;
+
+	let queue = [start];
+	let visited = new Set([start]);
+
+	while (queue.length > 0) {
+		let len = queue.length;
+
+		for (let i = 0; i < len; i++) {
+			let cur = queue.shift();
+			if (cur.left && !visited.has(cur.left)) {
+				visited.add(cur.left);
+				queue.push(cur.left);
+			}
+			if (cur.right && !visited.has(cur.right)) {
+				visited.add(cur.right);
+				queue.push(cur.right);
+			}
+			let par = parents.has(cur) ? parents.get(cur) : null;
+			if (par && !visited.has(par)) {
+				visited.add(par);
+				queue.push(par);
+			}
+		}
+		distance++;
+	}
+
+	return distance - 1;
+}
