@@ -260,4 +260,8 @@
 
 # Thursday 20260129
 
-#### Striver 13.3.6
+#### Striver 13.3.6 - 13.3.8
+
+# Friday 20260130
+
+#### Striver 13.3.9

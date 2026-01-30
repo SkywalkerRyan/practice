@@ -1,4 +1,4 @@
-// Striver 13.3.6
+// Striver 13.3.7
 function countNodes(root: TreeNode | null): number {
 	if (root === null) return 0;
 
