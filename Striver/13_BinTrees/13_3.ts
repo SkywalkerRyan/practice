@@ -326,3 +326,54 @@ function buildHelper(
 
 	return node;
 }
+
+// 0094
+function inorderTraversal(root: TreeNode | null): number[] {
+	if (root === null) return [];
+
+	let res = [];
+	let cur = root;
+
+	while (cur !== null) {
+		if (cur.left === null) {
+			res.push(cur.val);
+			cur = cur.right;
+		} else {
+			let prev = cur.left;
+			while (prev.right !== null && prev.right !== cur) {
+				prev = prev.right;
+			}
+
+			if (prev.right === null) {
+				prev.right = cur;
+				cur = cur.left;
+			} else {
+				prev.right = null;
+				res.push(cur.val);
+				cur = cur.right;
+			}
+		}
+	}
+
+	return res;
+}
+
+// 0114
+function flatten(root: TreeNode | null): void {
+	if (root === null) return;
+
+	let prev = { node: null };
+
+	return traverseFlatten(root, prev);
+}
+
+function traverseFlatten(node: TreeNode | null, prev: { node: TreeNode | null }): void {
+	if (node === null) return;
+
+	traverseFlatten(node.right, prev);
+	traverseFlatten(node.left, prev);
+
+	node.right = prev.node;
+	node.left = null;
+	prev.node = node;
+}
