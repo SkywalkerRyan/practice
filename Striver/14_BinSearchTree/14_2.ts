@@ -28,3 +28,30 @@ function ceiling(root: TreeNode | null, target: number): TreeNode | null {
 	let ceil = ceiling(root.left, target);
 	return ceil !== null ? ceil : root;
 }
+
+// Striver 14.2.2
+function ceilAndFloor(root: TreeNode | null, target: number): number[] {
+	if (root === null) return [];
+
+	let res = { ceil: null, floor: null };
+
+	helper(root, target, res);
+
+	return [res.ceil, res.floor];
+}
+
+function helper(node: TreeNode | null, target: number, res: { ceil: number | null; floor: number | null }): void {
+	if (node === null) return;
+
+	if (node.val === target) {
+		res.ceil = node.val;
+		res.floor = node.val;
+		return;
+	} else if (node.val < target) {
+		res.floor = node.val;
+		return helper(node.right, target, res);
+	} else {
+		res.ceil = node.val;
+		return helper(node.left, target, res);
+	}
+}
