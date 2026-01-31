@@ -20,6 +20,7 @@ https://algomap.io/roadmap
 | Rec          | Recursion             |
 | Bac          | Backtracking          |
 | Btr          | Binary Tree           |
+| Bst          | Binary Search Tree    |
 
 # Arrays
 
@@ -191,6 +192,10 @@ https://algomap.io/roadmap
     S 13.3.14 Flatten Binary Tree to LinkedList
 
 # BST
+
+#### S 14.1 Concepts
+
+#### S 14.2 Practive Problems
 
 # Trie
 
