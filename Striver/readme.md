@@ -197,6 +197,8 @@ https://algomap.io/roadmap
 
 #### S 14.2 Practive Problems
 
+    S 14.2.4 Delete a Node in Binary Search Tree, How?!
+
 # Trie
 
 # Sorting
