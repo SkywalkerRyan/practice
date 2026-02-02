@@ -115,3 +115,47 @@ function findMin(node: TreeNode) {
 	while (node.left !== null) node = node.left;
 	return node;
 }
+
+// 0230
+function kthSmallest(root: TreeNode | null, k: number): number {
+	if (root === null) return 0;
+
+	let counter = { target: k, cnt: 0 };
+	let res = [];
+
+	helperKthSmallest(root, counter, res);
+
+	return res[k - 1];
+}
+
+function helperKthSmallest(node: TreeNode | null, counter: { target: number; cnt: number }, res: number[]): void {
+	if (node === null || counter.cnt === counter.target) return;
+
+	helperKthSmallest(node.left, counter, res);
+	res.push(node.val);
+	counter.cnt = counter.cnt + 1;
+	helperKthSmallest(node.right, counter, res);
+}
+
+// 0230
+function kthSmallest(root: TreeNode | null, k: number): number {
+	if (root === null) return 0;
+
+	let counter = { target: k, cnt: 0, res: 0 };
+
+	helperKthSmallest(root, counter);
+
+	return counter.res;
+}
+
+function helperKthSmallest(node: TreeNode | null, counter: { target: number; cnt: number; res: number }): void {
+	if (node === null || counter.cnt >= counter.target) return;
+
+	helperKthSmallest(node.left, counter);
+	counter.cnt = counter.cnt + 1;
+	if (counter.cnt === counter.target) {
+		counter.res = node.val;
+		return;
+	}
+	helperKthSmallest(node.right, counter);
+}
