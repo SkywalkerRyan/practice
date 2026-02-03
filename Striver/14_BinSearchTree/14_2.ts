@@ -159,3 +159,56 @@ function helperKthSmallest(node: TreeNode | null, counter: { target: number; cnt
 	}
 	helperKthSmallest(node.right, counter);
 }
+
+// 0098
+function isValidBST(root: TreeNode | null): boolean {
+	if (root === null) return true;
+
+	let res = [];
+
+	return helperIsValidBST(root, res);
+}
+
+function helperIsValidBST(node: TreeNode | null, res: number[]): boolean {
+	if (node === null) return true;
+
+	if (!helperIsValidBST(node.left, res)) return false;
+	if (res.length > 0 && node.val <= res[res.length - 1]) return false;
+	res.push(node.val);
+	if (!helperIsValidBST(node.right, res)) return false;
+
+	return true;
+}
+// 0098
+function isValidBST(root: TreeNode | null): boolean {
+	if (root === null) return true;
+
+	let prev = { val: null };
+
+	return helperIsValidBST(root, prev);
+}
+
+function helperIsValidBST(node: TreeNode | null, prev: { val: number | null }): boolean {
+	if (node === null) return true;
+
+	if (!helperIsValidBST(node.left, prev)) return false;
+	if (prev.val !== null && node.val <= prev.val) return false;
+	prev.val = node.val;
+	if (!helperIsValidBST(node.right, prev)) return false;
+
+	return true;
+}
+
+// 0098
+function isValidBST(root: TreeNode | null): boolean {
+	return helperIsValidBST(root, null, null);
+}
+
+function helperIsValidBST(node: TreeNode | null, min: number | null, max: number | null): boolean {
+	if (node === null) return true;
+
+	if (min !== null && node.val <= min) return false;
+	if (max !== null && node.val >= max) return false;
+
+	return helperIsValidBST(node.left, min, node.val) && helperIsValidBST(node.right, node.val, max);
+}
