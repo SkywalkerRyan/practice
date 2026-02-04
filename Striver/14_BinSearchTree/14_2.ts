@@ -212,3 +212,13 @@ function helperIsValidBST(node: TreeNode | null, min: number | null, max: number
 
 	return helperIsValidBST(node.left, min, node.val) && helperIsValidBST(node.right, node.val, max);
 }
+
+// 0235
+function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
+	if (root === null) return root;
+
+	if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(root.left, p, q);
+	if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right, p, q);
+
+	return root;
+}
