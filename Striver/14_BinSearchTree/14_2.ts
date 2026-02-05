@@ -285,3 +285,24 @@ function helperBstFromPreorder(
 
 	return node;
 }
+
+// 0285
+function predecessor(root: TreeNode | null, target: number): number {
+	if (root === null) return 0;
+
+	let res = { pred: null };
+
+	helperPredecessor(root, target, res);
+	return res.pred;
+}
+
+function helperPredecessor(node: TreeNode | null, target: number, res: { pred: number }): void {
+	if (node === null) return;
+
+	if (node.val < target) {
+		res.pred = node.val;
+		helperPredecessor(node.right, target, res);
+	} else helperPredecessor(node.left, target, res);
+
+	return;
+}
