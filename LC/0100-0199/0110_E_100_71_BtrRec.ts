@@ -1,4 +1,4 @@
-// Striver 13.2.2
+// Striver 13.2.2, AlgoMap 08.3
 function isBalanced(root: TreeNode | null): boolean {
 	if (root === null) return true;
 

@@ -1,4 +1,4 @@
-// Striver 13.2.1
+// Striver 13.2.1, AlgoMap 08.2
 function maxDepthRec(root: TreeNode | null): number {
 	if (root === null) return 0;
 

@@ -1,4 +1,4 @@
-// Striver 13.2.12
+// Striver 13.2.12, AlgoMap 08.6
 function isSymmetric(root: TreeNode | null): boolean {
 	if (root === null) return true;
 	if (root.left === null && root.right === null) return true;

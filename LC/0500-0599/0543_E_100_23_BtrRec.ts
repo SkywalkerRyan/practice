@@ -1,4 +1,4 @@
-// Striver 13.2.3
+// Striver 13.2.3, AlgoMap 08.4
 function diameterOfBinaryTree(root: TreeNode | null): number {
 	if (root === null) return 0;
 
