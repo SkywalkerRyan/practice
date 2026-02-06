@@ -284,4 +284,8 @@
 
 # Thursday 20260205
 
-#### Striver 14.2.10 - 14.2.12, AlgoMap 08.1 -
+#### Striver 14.2.10 - 14.2.12, AlgoMap 08.1 - 08.7
+
+# Friday 20260206
+
+#### AlgoMap 08.8
