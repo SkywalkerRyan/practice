@@ -120,3 +120,54 @@ function isSameTree(node1: TreeNode | null, node2: TreeNode | null): boolean {
 
 	return isSameTree(node1.left, node2.left) && isSameTree(node1.right, node2.right);
 }
+
+// 0102
+function levelOrder(root: TreeNode | null): number[][] {
+	if (root === null) return [];
+
+	let queue = [root];
+	let res = [];
+
+	while (queue.length > 0) {
+		let len = queue.length;
+		let temp = [];
+
+		for (let i = 0; i < len; i++) {
+			let cur = queue.shift();
+			temp.push(cur.val);
+
+			if (cur.left) queue.push(cur.left);
+			if (cur.right) queue.push(cur.right);
+		}
+		res.push(temp);
+	}
+
+	return res;
+}
+
+// 0637
+function averageOfLevels(root: TreeNode | null): number[] {
+	if (root === null) return [];
+
+	let queue = [root];
+	let res = [];
+
+	while (queue.length > 0) {
+		let len = queue.length;
+		let tempRes = 0;
+		let tempCnt = 0;
+
+		for (let i = 0; i < len; i++) {
+			let cur = queue.shift();
+			tempRes += cur.val;
+			tempCnt++;
+
+			if (cur.left) queue.push(cur.left);
+			if (cur.right) queue.push(cur.right);
+		}
+
+		res.push(tempRes / tempCnt);
+	}
+
+	return res;
+}
