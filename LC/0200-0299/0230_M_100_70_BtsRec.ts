@@ -1,4 +1,4 @@
-// Striver 14.2.5
+// Striver 14.2.5, AlgoMap 08.11
 function kthSmallest(root: TreeNode | null, k: number): number {
 	if (root === null) return 0;
 

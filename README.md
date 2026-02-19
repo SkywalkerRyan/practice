@@ -288,4 +288,8 @@
 
 # Friday 20260206
 
-#### AlgoMap 08.8
+#### AlgoMap 08.8 - 08.11
+
+# Thursday 20260219
+
+#### AlgoMap 08.12

@@ -171,3 +171,45 @@ function averageOfLevels(root: TreeNode | null): number[] {
 
 	return res;
 }
+
+// 0230
+function kthSmallest(root: TreeNode | null, k: number): number {
+	if (root === null) return 0;
+
+	let res = { counter: 0, k: k, res: 0 };
+	helperKthSmallest(root, res);
+	return res.res;
+}
+
+function helperKthSmallest(node: TreeNode | null, res: { counter: number; k: number; res: number }): void {
+	if (node === null || res.counter >= res.k) return;
+
+	helperKthSmallest(node.left, res);
+	res.counter = res.counter + 1;
+	if (res.counter === res.k) {
+		res.res = node.val;
+		return;
+	}
+	helperKthSmallest(node.right, res);
+}
+
+// 0530
+function getMinimumDifference(root: TreeNode | null): number {
+	let res = { prev: -Infinity, min: Infinity };
+
+	helperGetMinDiff(root, res);
+
+	return res.min;
+}
+
+function helperGetMinDiff(node: TreeNode | null, res: { prev: number; min: number }): void {
+	if (node === null) return;
+
+	helperGetMinDiff(node.left, res);
+
+	res.min = Math.min(res.min, Math.abs(node.val - res.prev));
+	if (res.min === 1) return;
+
+	res.prev = node.val;
+	helperGetMinDiff(node.right, res);
+}
