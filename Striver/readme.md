@@ -21,6 +21,7 @@ https://algomap.io/roadmap
 | Bac          | Backtracking          |
 | Btr          | Binary Tree           |
 | Bst          | Binary Search Tree    |
+| Tri          | Tries                 |
 
 # Arrays
 
@@ -200,7 +201,13 @@ https://algomap.io/roadmap
     S 14.2.4 Delete a Node in Binary Search Tree, How?!
     S 14.2.5 Kth Smallest Element in a BST
 
+#### AM 08
+
+    AM 08.14 Implement Trie (Prefix Tree), Return after Trie
+
 # Trie
+
+    AM 08.14 Implement Trie (Prefix Tree), Return after Trie
 
 # Sorting
 

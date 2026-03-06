@@ -1,4 +1,4 @@
-// Striver 14.2.6
+// Striver 14.2.6, AlgoMap 08.13
 function isValidBST(root: TreeNode | null): boolean {
 	return helperIsValidBST(root, null, null);
 }

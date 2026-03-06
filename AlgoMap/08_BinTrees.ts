@@ -1,4 +1,5 @@
 import { TreeNode } from '../Practices/BinaryTrees/node';
+import { TrieNode } from '../Practices/Tries/node';
 
 // 0226
 function invertTree(root: TreeNode | null): TreeNode | null {
@@ -113,7 +114,7 @@ function isSubtree(root: TreeNode | null, subRoot: TreeNode | null): boolean {
 	return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 }
 
-function isSameTree(node1: TreeNode | null, node2: TreeNode | null): boolean {
+function isSameTree1(node1: TreeNode | null, node2: TreeNode | null): boolean {
 	if (node1 === null && node2 === null) return true;
 	if (node1 === null || node2 === null) return false;
 	if (node1.val !== node2.val) return false;
@@ -212,4 +213,75 @@ function helperGetMinDiff(node: TreeNode | null, res: { prev: number; min: numbe
 
 	res.prev = node.val;
 	helperGetMinDiff(node.right, res);
+}
+
+// 0098
+function isValidBST(root: TreeNode | null): boolean {
+	return helperIsValid(root, null, null);
+}
+
+function helperIsValid(node: TreeNode | null, min: number | null, max: number | null): boolean {
+	if (node === null) return true;
+
+	if (min !== null && node.val <= min) return false;
+	if (max !== null && node.val >= max) return false;
+
+	return helperIsValid(node.left, min, node.val) && helperIsValid(node.right, node.val, max);
+}
+
+// 0235
+function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
+	if (root === null) return root;
+
+	if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(root.left, p, q);
+	if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right, p, q);
+
+	return root;
+}
+
+// 0208
+export class Trie {
+	child: Map<string, Trie>;
+	isEnd: boolean;
+
+	constructor() {
+		this.child = new Map();
+		this.isEnd = false;
+	}
+
+	insert(word: string): void {
+		let cur: Trie = this;
+
+		for (const char of word) {
+			if (!cur.child.has(char)) {
+				cur.child.set(char, new Trie());
+			}
+			cur = cur.child.get(char)!;
+		}
+		cur.isEnd = true;
+	}
+
+	search(word: string): boolean {
+		let cur: Trie = this;
+
+		for (const char of word) {
+			if (!cur.child.has(char)) {
+				return false;
+			}
+			cur = cur.child.get(char)!;
+		}
+		return cur.isEnd;
+	}
+
+	startsWith(prefix: string): boolean {
+		let cur: Trie = this;
+
+		for (const char of prefix) {
+			if (!cur.child.has(char)) {
+				return false;
+			}
+			cur = cur.child.get(char)!;
+		}
+		return true;
+	}
 }

@@ -127,3 +127,5 @@ function groupAnagrams(strs: string[]): string[][] {
 }
 
 console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
+
+export { numJewelsInStones, containsDuplicate1, canConstruct, maxNumberOfBalloons, isValidSudoku, groupAnagrams };

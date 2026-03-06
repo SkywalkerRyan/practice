@@ -1,4 +1,4 @@
-// Striver 14.2.7
+// Striver 14.2.7, AlgoMap 08.13
 function lowestCommonAncestor(root: TreeNode | null, p: TreeNode | null, q: TreeNode | null): TreeNode | null {
 	if (root === null) return root;
 
