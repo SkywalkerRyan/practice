@@ -203,11 +203,11 @@ https://algomap.io/roadmap
 
 #### AM 08
 
-    AM 08.14 Implement Trie (Prefix Tree), Return after Trie
+    AM 08.14 Implement Trie (Prefix Tree)
 
 # Trie
 
-    AM 08.14 Implement Trie (Prefix Tree), Return after Trie
+    AM 08.14 Implement Trie (Prefix Tree)
 
 # Sorting
 

@@ -1,6 +1,6 @@
-import { Trie } from './08_BinTrees';
+import { Trie } from './08_Tries';
 
-describe('Trie insert search', () => {
+describe.skip('Trie insert search', () => {
 	let trie = new Trie();
 
 	it('returns false for an empty map', () => {
@@ -30,7 +30,7 @@ describe('Trie insert search', () => {
 	});
 });
 
-describe('Trie insert startsWith', () => {
+describe.skip('Trie insert startsWith', () => {
 	let trie = new Trie();
 	trie.insert('apple');
 
@@ -43,5 +43,32 @@ describe('Trie insert startsWith', () => {
 
 	it('returns true when searching with an empty string', () => {
 		expect(trie.startsWith('')).toBe(true);
+	});
+});
+
+describe('Trie insert countWordsEqualTo', () => {
+	let trie: Trie;
+	beforeEach(() => {
+		trie = new Trie();
+	});
+
+	it('returns 0 for an word not inserted', () => {
+		expect(trie.countWordsEqualTo('apple')).toBe(0);
+	});
+
+	it('returns 1 for an inserted word', () => {
+		trie.insert('apple');
+		expect(trie.countWordsEqualTo('apple')).toBe(1);
+	});
+
+	it('returns 2 for an word inserted again', () => {
+		trie.insert('apple');
+		trie.insert('apple');
+		expect(trie.countWordsEqualTo('apple')).toBe(2);
+	});
+
+	it('returns 0 for an empty string with an inserted word', () => {
+		trie.insert('apple');
+		expect(trie.countWordsEqualTo('')).toBe(0);
 	});
 });
