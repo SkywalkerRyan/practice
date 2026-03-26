@@ -1,4 +1,4 @@
-export function tryFunc(grid: number[][]): boolean {
+function canPartitionGrid(grid: number[][]): boolean {
 	let m = grid.length;
 	let n = grid[0].length;
 	let o = m * n;
@@ -12,7 +12,7 @@ export function tryFunc(grid: number[][]): boolean {
 		let col = (i - 1) % n;
 
 		let cRow = (i - 1) % m;
-		let cCol = Math.floor(i - 1) / m;
+		let cCol = Math.floor((i - 1) / m);
 
 		pref[i] = pref[i - 1] + grid[row][col];
 		prefCol[i] = prefCol[i - 1] + grid[cRow][cCol];
@@ -26,10 +26,3 @@ export function tryFunc(grid: number[][]): boolean {
 
 	return false;
 }
-
-console.log(
-	tryFunc([
-		[1, 4],
-		[2, 3],
-	])
-);
