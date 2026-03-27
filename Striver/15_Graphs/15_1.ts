@@ -50,3 +50,27 @@ console.log(
 		[4, 5],
 	])
 );
+
+// Striver 15.1.5
+function dfsTraversal(v: number, edges: number[][]): number[] {
+	let adjMat = Array.from({ length: v }, () => []);
+	for (const [a, b] of edges) {
+		adjMat[a].push(b);
+		adjMat[b].push(a);
+	}
+
+	let visited: boolean[] = new Array(v).fill(false);
+	let ans = [];
+
+	dfs(0, ans, adjMat, visited);
+
+	return ans;
+}
+
+function dfs(cur: number, ans: number[], adjMat: number[][], visited: boolean[]): void {
+	visited[cur] = true;
+	ans.push(cur);
+	for (let i = 0; i < adjMat[cur].length; i++) {
+		if (!visited[adjMat[cur][i]]) dfs(adjMat[cur][i], ans, adjMat, visited);
+	}
+}
