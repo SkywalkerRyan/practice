@@ -24,4 +24,3 @@ function findCircleNumTrav(isConnected: number[][]): number {
 
 	return province;
 }
-
