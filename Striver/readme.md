@@ -22,6 +22,8 @@ https://algomap.io/roadmap
 | Btr          | Binary Tree           |
 | Bst          | Binary Search Tree    |
 | Tri          | Tries                 |
+| Grf          | Graph                 |
+| Unf          | Union Find            |
 
 # Arrays
 
