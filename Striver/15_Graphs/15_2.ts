@@ -112,5 +112,39 @@ export function findProvincesDFS(v: number, edges: number[][]): number {
 
 // Striver 15.2.2
 export function findProvincesBFS(v: number, edges: number[][]): number {
-	//
+	let adjMat: number[][] = Array.from({ length: v }, () => []);
+
+	for (const [x, y] of edges) {
+		adjMat[x].push(y);
+		adjMat[y].push(x);
+	}
+
+	let visited: boolean[] = new Array(v).fill(false);
+	let province = 0;
+	let queue: number[] = [];
+
+	for (let i = 0; i < v; i++) {
+		if (!visited[i]) {
+			visited[i] = true;
+			province++;
+			queue.push(i);
+		}
+
+		BFS();
+	}
+
+	function BFS() {
+		while (queue.length) {
+			let cur = queue.shift()!;
+
+			for (let i = 0; i < adjMat[cur].length; i++) {
+				if (!visited[adjMat[cur][i]]) {
+					visited[adjMat[cur][i]] = true;
+					queue.push(adjMat[cur][i]);
+				}
+			}
+		}
+	}
+
+	return province;
 }
