@@ -237,3 +237,7 @@ https://algomap.io/roadmap
 
     S 7.3.2 Word Search, Return after finishing Depth First Search
     S 7.3.3 Rat in a Maze, Return after finishing Depth First Search
+
+#### Problems on BFS/DFS
+
+    S 15.2.1 Number of provinces Union find

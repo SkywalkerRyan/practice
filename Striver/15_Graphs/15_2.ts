@@ -54,6 +54,7 @@ export function findCircleNumBFS(isConnected: number[][]): number {
 	return province;
 }
 
+// LC 547
 export function findCircleNumUnionFind(isConnected: number[][]): number {
 	let n: number = isConnected.length;
 	let count: number = n;
@@ -79,4 +80,37 @@ export function findCircleNumUnionFind(isConnected: number[][]): number {
 	}
 
 	return count;
+}
+
+// Striver 15.2.2
+export function findProvincesDFS(v: number, edges: number[][]): number {
+	let adjMat: number[][] = Array.from({ length: v }, () => []);
+
+	for (const [x, y] of edges) {
+		adjMat[x].push(y);
+		adjMat[y].push(x);
+	}
+
+	let visited: boolean[] = new Array(v).fill(false);
+	let province = 0;
+
+	for (let i = 0; i < v; i++) {
+		if (!visited[i]) {
+			DFS(i);
+			province++;
+		}
+	}
+
+	function DFS(cur: number) {
+		visited[cur] = true;
+
+		for (let j = 0; j < adjMat[cur].length; j++) if (!visited[adjMat[cur][j]]) DFS(adjMat[cur][j]);
+	}
+
+	return province;
+}
+
+// Striver 15.2.2
+export function findProvincesBFS(v: number, edges: number[][]): number {
+	//
 }
