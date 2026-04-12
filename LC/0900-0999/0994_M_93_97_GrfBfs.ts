@@ -1,4 +1,4 @@
-// Striver 15.2.2
+// Striver 15.2.3
 // O(mn), O(mn)
 function orangesRotting(grid: number[][]): number {
 	let m: number = grid.length;
