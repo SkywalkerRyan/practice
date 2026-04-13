@@ -24,6 +24,8 @@ https://algomap.io/roadmap
 | Tri          | Tries                 |
 | Grf          | Graph                 |
 | Unf          | Union Find            |
+| Bfs          | Breadth First Search  |
+| Dfs          | Depth First Search    |
 
 # Arrays
 
