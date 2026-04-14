@@ -318,10 +318,14 @@
 
 #### Striver 15.2.1 - 15.2.2
 
-## Sunday 20260412
+# Sunday 20260412
 
 #### Striver 15.2.3 - 15.2.4
 
-## Monday 20260413
+# Monday 20260413
 
-#### Striver 15.2.5
+#### Striver 15.2.5 - 15.2.6
+
+# Tuesday 20260414
+
+#### Striver 15.2.7

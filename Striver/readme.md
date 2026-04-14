@@ -243,3 +243,4 @@ https://algomap.io/roadmap
 #### Problems on BFS/DFS
 
     S 15.2.1 Number of provinces Union find
+    S 15.2.7 Distance of nearest cell having one

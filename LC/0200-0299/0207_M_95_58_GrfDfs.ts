@@ -1,4 +1,4 @@
-// Striver 15.2.5
+// Striver 15.2.6
 // O(numCourses + prereq length), O(adjacency list + visited, instack)
 function canFinishDfs(numCourses: number, prerequisites: number[][]): boolean {
 	let adjMat: number[][] = Array.from({ length: numCourses }, () => []);
