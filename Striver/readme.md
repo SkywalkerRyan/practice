@@ -244,3 +244,5 @@ https://algomap.io/roadmap
 
     S 15.2.1 Number of provinces Union find
     S 15.2.7 Distance of nearest cell having one
+    S 15.2.10 Word Ladder I
+    S 15.2.11 Word Ladder II
