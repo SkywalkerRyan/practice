@@ -496,14 +496,19 @@ function numIslands(grid: string[][]): number {
 	];
 
 	function markVisited(r: number, c: number): void {
-		for (const [dr, dc] of dirs) {
-			const nr = r + dr;
-			const nc = c + dc;
+		let queue = [[r, c]];
 
-			if (nr >= 0 && nr <= m - 1 && nc >= 0 && nc <= n - 1) {
-				if (grid[nr][nc] === '1') {
-					grid[nr][nc] = '0';
-					markVisited(nr, nc);
+		while (queue.length) {
+			const [qr, qc] = queue.shift()!;
+			for (const [dr, dc] of dirs) {
+				const nr = qr + dr;
+				const nc = qc + dc;
+
+				if (nr >= 0 && nr <= m - 1 && nc >= 0 && nc <= n - 1) {
+					if (grid[nr][nc] === '1') {
+						grid[nr][nc] = '0';
+						queue.push([nr, nc]);
+					}
 				}
 			}
 		}
