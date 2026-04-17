@@ -446,7 +446,7 @@ function numEnclaves(grid: number[][]): number {
 }
 
 // LC 200 DFS
-function numIslands(grid: string[][]): number {
+function numIslandsDFS(grid: string[][]): number {
 	const dirs = [
 		[-1, 0],
 		[1, 0],
@@ -487,7 +487,7 @@ function numIslands(grid: string[][]): number {
 }
 
 // LC 200 BFS
-function numIslands(grid: string[][]): number {
+function numIslandsBFS(grid: string[][]): number {
 	const dirs = [
 		[-1, 0],
 		[1, 0],
@@ -530,6 +530,27 @@ function numIslands(grid: string[][]): number {
 	}
 
 	return count;
+}
+
+// LC 785
+function isBipartiteDFS(graph: number[][]): boolean {
+	let m: number = graph.length;
+
+	let colors: number[] = new Array(m).fill(-1);
+
+	function dfs(x: number, curColor: number): boolean {
+		if (colors[x] !== -1) return colors[x] === curColor;
+		colors[x] = curColor;
+		for (let i = 0; i < graph[x].length; i++) {
+			if (!dfs(graph[x][i], 1 - curColor)) return false;
+		}
+		return true;
+	}
+
+	for (let i = 0; i < graph.length; i++) {
+		if (colors[i] === -1 && !dfs(i, 0)) return false;
+	}
+	return true;
 }
 
 for (let i = 0; i < m; i++) {
