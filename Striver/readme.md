@@ -248,3 +248,5 @@ https://algomap.io/roadmap
     S 15.2.11 Word Ladder II
     S 15.2.13 Is Graph Bipartite? DFS
     S 15.2.13 Is Graph Bipartite? BFS
+    S 14.2.14 Course Schedule II DFS
+    S 14.2.14 Course Schedule II BFS
