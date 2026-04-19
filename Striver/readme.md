@@ -26,6 +26,7 @@ https://algomap.io/roadmap
 | Unf          | Union Find            |
 | Bfs          | Breadth First Search  |
 | Dfs          | Depth First Search    |
+| Tps          | Topological Sort      |
 
 # Arrays
 
@@ -240,7 +241,9 @@ https://algomap.io/roadmap
     S 7.3.2 Word Search, Return after finishing Depth First Search
     S 7.3.3 Rat in a Maze, Return after finishing Depth First Search
 
-#### Problems on BFS/DFS
+#### S 15.1 Learning
+
+#### S 15.2 Problems on BFS/DFS
 
     S 15.2.1 Number of provinces Union find
     S 15.2.7 Distance of nearest cell having one
