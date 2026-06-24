@@ -1,12 +1,15 @@
-import { tryFunc } from './try';
+import { nearestValidPoint } from './try';
 
-describe.skip('tryFunc', () => {
+describe('nearestValidPoint', () => {
 	it('should return the product of all the items', () => {
 		expect(
-			tryFunc([
+			nearestValidPoint(3, 4, [
 				[1, 2],
-				[3, 4],
+				[3, 1],
+				[2, 4],
+				[2, 3],
+				[4, 4],
 			])
-		).toBe(24);
+		).toBe(2);
 	});
 });

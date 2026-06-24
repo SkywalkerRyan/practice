@@ -253,3 +253,7 @@ https://algomap.io/roadmap
     S 15.2.13 Is Graph Bipartite? BFS
     S 14.2.14 Course Schedule II DFS
     S 14.2.14 Course Schedule II BFS
+
+#### S 15.3 Topo sort and problems
+
+    S 15.3.3 Topological sort or Kahn's algorithm

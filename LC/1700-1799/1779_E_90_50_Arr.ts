@@ -1,4 +1,5 @@
 // LC 1779
+// O(n), O(1)
 export function nearestValidPoint(x: number, y: number, points: number[][]): number {
 	let lowest = Infinity;
 	let lid = -1;
@@ -14,5 +15,3 @@ export function nearestValidPoint(x: number, y: number, points: number[][]): num
 
 	return lid;
 }
-
-// console.log();
