@@ -1,15 +1,7 @@
-import { nearestValidPoint } from './try';
+import { find132pattern } from './try';
 
-describe('nearestValidPoint', () => {
+describe('find132pattern', () => {
 	it('should return the product of all the items', () => {
-		expect(
-			nearestValidPoint(3, 4, [
-				[1, 2],
-				[3, 1],
-				[2, 4],
-				[2, 3],
-				[4, 4],
-			])
-		).toBe(2);
+		expect(find132pattern([1, 0, 1, -4, -3])).toBe(false);
 	});
 });

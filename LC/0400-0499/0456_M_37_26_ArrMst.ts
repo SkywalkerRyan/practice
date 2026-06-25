@@ -1,4 +1,5 @@
 // LC 0456
+// O(n), O(n)
 export function find132pattern(nums: number[]): boolean {
 	let stk3: number[] = [];
 	let two = -Infinity;
@@ -16,5 +17,3 @@ export function find132pattern(nums: number[]): boolean {
 
 	return false;
 }
-
-// console.log();
