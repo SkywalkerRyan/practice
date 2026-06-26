@@ -1,4 +1,5 @@
 // LC 1968
+// O(n^2), O(1)
 function rearrangeArray(nums: number[]): number[] {
 	let i = 1;
 	while (i < nums.length - 1) {
@@ -9,7 +10,3 @@ function rearrangeArray(nums: number[]): number[] {
 	}
 	return nums;
 }
-
-// console.log();
-
-export default rearrangeArray;
