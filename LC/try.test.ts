@@ -1,7 +1,7 @@
-import { find132pattern } from './try';
+import tryFunc from './try';
 
-describe('find132pattern', () => {
+describe('tryFunc', () => {
 	it('should return the product of all the items', () => {
-		expect(find132pattern([1, 0, 1, -4, -3])).toBe(false);
+		expect(tryFunc([1, 2, 2, 5, 3, 5])).toBe(5);
 	});
 });

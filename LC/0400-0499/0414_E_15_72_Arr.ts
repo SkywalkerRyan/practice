@@ -1,4 +1,5 @@
 // LC 0414
+// O(n log n), O(n)
 function thirdMax(nums: number[]): number {
 	let tempSet: Set<number> = new Set();
 
@@ -11,7 +12,3 @@ function thirdMax(nums: number[]): number {
 	let tempArr: number[] = [...tempSet].sort((a, b) => b - a);
 	return tempArr[2];
 }
-
-// console.log();
-
-export default thirdMax;
