@@ -15,7 +15,3 @@ function thirdMax(nums: number[]): number {
 
 	return third === -Infinity ? first : third;
 }
-
-// console.log();
-
-export default thirdMax;
