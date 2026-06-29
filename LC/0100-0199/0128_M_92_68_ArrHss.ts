@@ -1,4 +1,5 @@
 // LC 128
+// O(n), O(n)
 function longestConsecutive(nums: number[]): number {
 	let highest = 0;
 
@@ -19,5 +20,3 @@ function longestConsecutive(nums: number[]): number {
 	}
 	return highest;
 }
-
-export default longestConsecutive;
