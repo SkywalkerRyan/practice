@@ -1,4 +1,5 @@
 // LC 1967
+// O(n), O(1)
 function numOfStrings(patterns: string[], word: string): number {
 	let res = 0;
 
