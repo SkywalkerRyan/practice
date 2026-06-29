@@ -1,4 +1,6 @@
 // LC 2121
+// O(n), O(n)
+// Kicchu bujhi nai
 function getDistances(arr: number[]): number[] {
 	let res = [];
 	let map: Map<number, number[]> = new Map();
@@ -40,5 +42,3 @@ function getDistances(arr: number[]): number[] {
 }
 
 console.log(getDistances([2, 1, 3, 1, 2, 3, 3]));
-
-export default getDistances;
