@@ -379,4 +379,4 @@ https://algomap.io/roadmap
 
 # Monday 20260629
 
-#### LC [2121]
+#### LC [2121], 0202, 0128, 1967

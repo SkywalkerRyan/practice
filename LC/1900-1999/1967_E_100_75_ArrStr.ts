@@ -6,5 +6,3 @@ function numOfStrings(patterns: string[], word: string): number {
 
 	return res;
 }
-
-export default numOfStrings;
