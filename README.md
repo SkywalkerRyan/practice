@@ -17,6 +17,7 @@ https://algomap.io/roadmap
 | Prs          | Prefix Sum            |
 | Bis          | Binary Search         |
 | Mat          | Matrix                |
+| Mth          | Math                  |
 | Rec          | Recursion             |
 | Bac          | Backtracking          |
 | Btr          | Binary Tree           |

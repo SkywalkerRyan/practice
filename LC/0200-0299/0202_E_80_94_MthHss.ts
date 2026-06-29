@@ -1,4 +1,5 @@
 // LC 202
+// O(log n), O(log n)
 function isHappy(n: number): boolean {
 	let cur = n;
 	let iter = true;
@@ -23,5 +24,3 @@ function isHappy(n: number): boolean {
 
 	return false;
 }
-
-export default isHappy;
