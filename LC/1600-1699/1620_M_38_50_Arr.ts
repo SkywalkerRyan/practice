@@ -1,4 +1,5 @@
 // LC 1620
+// O(g^2 n), O(1)
 function bestCoordinate(towers: number[][], radius: number): number[] {
 	let highPower = 0;
 	let highPoint = [0, 0];
@@ -23,5 +24,3 @@ function bestCoordinate(towers: number[][], radius: number): number[] {
 
 	return highPoint;
 }
-
-export default bestCoordinate;
